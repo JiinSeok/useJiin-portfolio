@@ -1,0 +1,16 @@
+{
+  "ignoreFiles": [
+    "build/**",
+    "dist/**",
+    "node_modules/**",
+    "**.*.min.{css,js}",
+    "package-lock.json"
+  ],
+  "extends": [
+    "stylelint-config-tailwindcss"
+  ],
+  "rules": {
+    "no-duplicate-selectors": true,
+    "block-no-empty": true
+  }
+}

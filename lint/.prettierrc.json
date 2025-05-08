@@ -1,0 +1,34 @@
+{
+  "overrides": [
+    {
+      "files": [
+        "build/**.*",
+        "dist/**/*.js",
+        "node_modules/**.*",
+        "package-lock.json",
+        "*.min.*"
+      ],
+      "options": { "parser": "json" }
+    }
+  ],
+  "trailingComma": "all",
+  "tabWidth": 2,
+  "endOfLine": "lf",
+  "arrowParens": "always",
+  "singleQuote": true,
+  "semi": false,
+  "importOrder": [
+    "^@utils/(.*)$",
+    "^@apis/(.*)$",
+    "^@hooks/(.*)$",
+    "^@recoils/(.*)$",
+    "^@pages/(.*)$",
+    "^@base/(.*)$",
+    "^@common/(.*)$",
+    "^@components/(.*)$",
+    "^@styles/(.*)$",
+    "^[./]"
+  ],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true
+}

@@ -1,0 +1,145 @@
+name: Build and Deploy to AWS ECR and EC2
+
+on:
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: 'Branch to deploy'
+        required: true
+        default: 'dev'
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          # Yarn Berry Zero Install을 위해 전체 히스토리 필요
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '22'
+          cache: 'yarn'
+
+      - name: Enable Corepack (Yarn 4)
+        run: corepack enable
+
+      - name: Install dependencies for production (node_modules mode)
+        run: |
+          node .yarn/releases/yarn-4.9.1.cjs config set nodeLinker node-modules
+          node .yarn/releases/yarn-4.9.1.cjs install --immutable
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v2
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_REGION }}
+
+      - name: Login to Amazon ECR
+        id: login-ecr
+        uses: aws-actions/amazon-ecr-login@v1
+
+      - name: Set up image tags
+        id: tags
+        run: |
+          echo "::set-output name=sha_tag::${{ github.sha }}"
+          echo "::set-output name=date_tag::$(date +'%Y%m%d%H%M%S')"
+          echo "::set-output name=registry::${{ steps.login-ecr.outputs.registry }}"
+
+      - name: Build and push image to Amazon ECR
+        env:
+          ECR_REGISTRY: ${{ steps.tags.outputs.registry }}
+          ECR_REPOSITORY: nexca-console
+          SHA_TAG: ${{ steps.tags.outputs.sha_tag }}
+          DATE_TAG: ${{ steps.tags.outputs.date_tag }}
+        run: |
+          # 여러 태그로 이미지 빌드
+          docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$SHA_TAG \
+                       -t $ECR_REGISTRY/$ECR_REPOSITORY:$DATE_TAG \
+                       -t $ECR_REGISTRY/$ECR_REPOSITORY:latest .
+          
+          # 모든 태그 푸시
+          docker push $ECR_REGISTRY/$ECR_REPOSITORY:$SHA_TAG
+          docker push $ECR_REGISTRY/$ECR_REPOSITORY:$DATE_TAG
+          docker push $ECR_REGISTRY/$ECR_REPOSITORY:latest
+          
+          # 배포에 사용할 태그 저장 (Git 커밋 해시)
+          echo "DEPLOY_TAG=$SHA_TAG" >> $GITHUB_ENV
+
+      - name: Deploy to EC2
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USERNAME }}
+          key: ${{ secrets.EC2_SSH_KEY }}
+          envs: DEPLOY_TAG,ENV_TAG,AWS_ACCESS_KEY_ID,AWS_SECRET_ACCESS_KEY,AWS_REGION,ECR_REGISTRY
+          script: |
+            # 임시 AWS 자격 증명 설정
+            export AWS_ACCESS_KEY_ID="${{ secrets.AWS_ACCESS_KEY_ID }}"
+            export AWS_SECRET_ACCESS_KEY="${{ secrets.AWS_SECRET_ACCESS_KEY }}"
+            export AWS_REGION="${{ secrets.AWS_REGION }}"
+
+            # ECR 로그인
+            aws ecr get-login-password --region ${{ secrets.AWS_REGION }} | docker login --username AWS --password-stdin ${{ steps.tags.outputs.registry }}
+
+            # 배포 이미지 정의
+            export DEPLOY_IMAGE="${{ steps.tags.outputs.registry }}/${{ secrets.ECR_REPOSITORY }}:${DEPLOY_TAG}"
+
+            # docker-compose.yml 파일 생성
+            cat > docker-compose.yml <<EOL
+            services:
+              nextjs-app:
+                image: ${DEPLOY_IMAGE}
+                container_name: nexca-console
+                networks:
+                  - nexca-network
+                ports:
+                  - "3000:3000"
+                environment:
+                  - GOOGLE_CLIENT_ID=${{ secrets.GOOGLE_CLIENT_ID }}
+                  - GOOGLE_CLIENT_SECRET=${{ secrets.GOOGLE_CLIENT_SECRET }}
+                  - GITHUB_CLIENT_ID=${{ secrets.GITH_CLIENT_ID }}
+                  - GITHUB_CLIENT_SECRET=${{ secrets.GITH_CLIENT_SECRET }}
+                  - NEXTAUTH_SECRET=${{ secrets.NEXTAUTH_SECRET }}
+                  - NEXCA_API_URL=http://nexca-api:8080
+                  - NEXTAUTH_URL=https://console.nexca.ai
+                restart: always
+
+              nginx:
+                image: nginx:latest
+                container_name: nexca-nginx
+                networks:
+                  - nexca-network
+                ports:
+                  - "80:80"
+                  - "443:443"
+                volumes:
+                  - ./nginx.conf:/etc/nginx/nginx.conf
+                  - /etc/letsencrypt:/etc/letsencrypt
+                depends_on:
+                  - nextjs-app
+                restart: always
+            networks:
+              nexca-network:
+                name: nexca-network
+                driver: bridge
+                external: true
+            EOL
+
+            # 기존 컨테이너 및 이미지 정리
+            docker-compose down --rmi all
+
+            # 최신 이미지 가져오기 및 컨테이너 실행
+            docker-compose pull
+            docker-compose up -d
+
+            # 배포된 태그 기록 (로깅 목적)
+            echo "$(date): Deployed ${DEPLOY_IMAGE}" >> /home/${{ secrets.EC2_USERNAME }}/deployment_history.log
+      - name: Deployment Status
+        run: |
+          echo "Successfully deployed image with tag $DEPLOY_TAG to EC2 instance at ${{ secrets.EC2_HOST }}"
+          echo "Timestamp: $(date)"

@@ -1,0 +1,67 @@
+{
+  "ignorePatterns": [
+    "dist/",
+    "node_modules/",
+    "**/*.min.js",
+    "public/**/*.js",
+    "**/*.css"
+  ],
+  "root": true,
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "next/core-web-vitals",
+    "prettier"
+  ],
+  "settings": {
+    "react": {
+      "version": "detect"
+    },
+    "import/resolver": {
+      "node": {
+        "paths": ["src"]
+      }
+    }
+  },
+  "env": {
+    "browser": true,
+    "es2023": true,
+    "node": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": ["./tsconfig.json"],
+    "ecmaVersion": 2023,
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "sourceType": "module"
+  },
+  "plugins": ["@typescript-eslint", "react"],
+  "rules": {
+    "import/no-absolute-path": [
+      "error",
+      {
+        "esmodule": true,
+        "commonjs": true,
+        "amd": true
+      }
+    ],
+    "@typescript-eslint/no-require-imports": "off"
+  },
+  "overrides": [
+    {
+      "files": ["src/**/*.{ts,tsx}", "public/**"],
+      "rules": {
+        "semi": ["warn", "never"],
+        "react/jsx-uses-vars": "warn",
+        "react/jsx-key": "error",
+        "react/prop-types": "off",
+        "@typescript-eslint/strict-boolean-expressions": "off",
+        "@typescript-eslint/no-explicit-any": "off",
+        "import/no-absolute-path": "off"
+      }
+    }
+  ]
+}
