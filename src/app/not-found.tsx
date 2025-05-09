@@ -14,15 +14,20 @@ export default function NotFoundPage() {
               The page you are looking for doesn&#39;t exist or has been moved.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
-                <Link href="/">
-                  Return Home
-                </Link>
+              <Button
+                asChild
+                size="lg"
+                className="bg-primary text-primary-foreground hover:bg-primary/90"
+              >
+                <Link href="/">Return Home</Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="border-primary text-primary hover:bg-primary/10">
-                <Link href="/contact">
-                  Contact Support
-                </Link>
+              <Button
+                asChild
+                size="lg"
+                variant="outline"
+                className="border-primary text-primary hover:bg-primary/10"
+              >
+                <Link href="/contact">Contact Support</Link>
               </Button>
             </div>
           </div>
