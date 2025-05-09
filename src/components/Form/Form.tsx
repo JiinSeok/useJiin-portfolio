@@ -337,6 +337,7 @@ function Input({
   const { forId } = useFieldContext()
   const inputClass = cn(
     'appearance-none rounded-lg border border-gray-200 w-full min-h-16 max-w-full max-h-full bg-transparent text-gray-800 text-xl font-normal focus:border-orange-500 focus:caret-orange-500 px-3 py-2',
+    `flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 ${className}`,
     className,
   )
 

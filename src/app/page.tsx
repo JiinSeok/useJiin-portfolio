@@ -1,20 +1,26 @@
 'use client'
 
+import { Input } from '@/components/Form/Input'
 import LanguageSwitcher from '@/components/LanguageSwitcher'
 import { Accordion, AccordionItem } from '@/components/ui/Accordion'
 import { Button } from '@/components/ui/Button'
-import ContactDialog, { useContactDialog } from '@/components/ui/ContactDialog'
-import { Input } from '@/components/ui/Input'
+import StepperDialog from '@/components/ui/Modal/StepperDialog'
+import { useModal } from '@/hooks/useModal'
 import { Link } from '@/navigation'
 import { useTranslations } from 'next-intl'
 
 export default function HomePage() {
   const t = useTranslations('HomePage')
-  const { openContactDialog, closeContactDialog, isContactDialogOpen } =
-    useContactDialog()
 
+  const { modalName, openModal, closeModal } = useModal()
   return (
     <div className="flex flex-col items-center">
+      {/* Contact Dialog */}
+      <StepperDialog
+        isOpen={modalName === 'contactDialog'}
+        onRequestCloseAction={closeModal}
+      />
+
       {/* Navigation */}
       <nav className="w-full max-w-7xl mx-auto px-4 py-6 flex justify-between items-center">
         <div className="flex items-center">
@@ -34,7 +40,7 @@ export default function HomePage() {
             {t('nav.benefits')}
           </Link>
           <button
-            onClick={openContactDialog}
+            onClick={() => openModal('contactDialog')}
             className="text-foreground hover:text-primary transition-colors"
           >
             {t('nav.contact')}
@@ -306,7 +312,7 @@ export default function HomePage() {
               size="lg"
               variant="outline"
               className="border-primary text-primary hover:bg-primary/10"
-              onClick={openContactDialog}
+              onClick={() => openModal}
             >
               {t('cta.contact')}
             </Button>
@@ -579,12 +585,6 @@ export default function HomePage() {
           </div>
         </div>
       </footer>
-
-      {/* Contact Dialog */}
-      <ContactDialog
-        isOpen={isContactDialogOpen}
-        onRequestCloseAction={closeContactDialog}
-      />
     </div>
   )
 }

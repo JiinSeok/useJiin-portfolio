@@ -32,74 +32,68 @@ export default function FormModal({
   return (
     <Modal isOpen={isOpen} onRequestCloseAction={onRequestCloseAction}>
       {/* 닫기 버튼 */}
-      <button
-        onClick={onRequestCloseAction}
-        className="absolute top-4 right-4 text-gray-500 hover:text-gray-700 transition-colors"
-        aria-label="닫기"
-      >
-        <X size={24} />
-      </button>
+      <Modal.CloseButton onClick={onRequestCloseAction} />
 
       {/* 아이콘 영역 */}
-      <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mb-6 mx-auto">
+      <Modal.Icon>
         <span className="text-3xl text-blue-500">✏️</span>
-      </div>
+      </Modal.Icon>
 
       <Form
         formId={`$Update`}
         onSubmit={handleSubmit}
         className={cn('w-full max-w-md mx-auto')}
       >
-        {/* 폼 내용 영역 */}
-        <div className="space-y-6">
-          <Form.Title className="text-center mb-4">
-            서비스 이용 사전 등록
-          </Form.Title>
+        <Modal.Body>
+          {/* 폼 내용 영역 */}
+          <div className="space-y-6">
+            <Modal.Title>서비스 이용 사전 등록</Modal.Title>
 
-          {/* 조직 이름 입력 필드 */}
-          <Form.Fieldset className="mb-1">
-            <Form.Field>
-              <Form.Legend>서비스 이용 조직</Form.Legend>
-              <Form.Input
-                name="storeName"
-                type="text"
-                // required
-                placeholder="조직 이름을 입력해 주세요."
-                className="focus:ring-2 focus:ring-blue-200"
-              />
-            </Form.Field>
-          </Form.Fieldset>
+            {/* 조직 이름 입력 필드 */}
+            <Form.Fieldset className="mb-1">
+              <Form.Field>
+                <Form.Legend>서비스 이용 조직</Form.Legend>
+                <Form.Input
+                  name="storeName"
+                  type="text"
+                  // required
+                  placeholder="조직 이름을 입력해 주세요."
+                  className="focus:ring-2 focus:ring-blue-200"
+                />
+              </Form.Field>
+            </Form.Fieldset>
 
-          {/* 조직 규모 입력 필드 */}
-          <Form.Fieldset className="mb-1">
-            <Form.Field>
-              <Form.Legend>조직 규모</Form.Legend>
-              <Form.Input
-                name="organizationSize"
-                type="text"
-                placeholder="문의하시는 조직의 규모를 입력해 주세요."
-                className="focus:ring-2 focus:ring-blue-200"
-              />
-            </Form.Field>
-          </Form.Fieldset>
+            {/* 조직 규모 입력 필드 */}
+            <Form.Fieldset className="mb-1">
+              <Form.Field>
+                <Form.Legend>조직 규모</Form.Legend>
+                <Form.Input
+                  name="organizationSize"
+                  type="text"
+                  placeholder="문의하시는 조직의 규모를 입력해 주세요."
+                  className="focus:ring-2 focus:ring-blue-200"
+                />
+              </Form.Field>
+            </Form.Fieldset>
 
-          {/* 이메일 입력 필드 */}
-          <Form.Fieldset className="mb-1">
-            <Form.Field>
-              <Form.Legend required>연락 받으실 이메일</Form.Legend>
-              <Form.Input
-                name="email"
-                type="email"
-                required
-                placeholder="조직 이메일을 입력해 주세요."
-                className="focus:ring-2 focus:ring-blue-200"
-              />
-            </Form.Field>
-          </Form.Fieldset>
-        </div>
+            {/* 이메일 입력 필드 */}
+            <Form.Fieldset className="mb-1">
+              <Form.Field>
+                <Form.Legend required>연락 받으실 이메일</Form.Legend>
+                <Form.Input
+                  name="email"
+                  type="email"
+                  required
+                  placeholder="조직 이메일을 입력해 주세요."
+                  className="focus:ring-2 focus:ring-blue-200"
+                />
+              </Form.Field>
+            </Form.Fieldset>
+          </div>
+        </Modal.Body>
 
         {/* 버튼 영역 */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center mt-2 text-xl">
+        <Modal.Footer>
           <Form.SubmitButton>등록요청</Form.SubmitButton>
           <Button
             className="py-2 px-4 border border-blue-500 text-blue-500 rounded-md hover:bg-blue-50 transition-colors"
@@ -110,7 +104,7 @@ export default function FormModal({
           >
             취소
           </Button>
-        </div>
+        </Modal.Footer>
       </Form>
     </Modal>
   )

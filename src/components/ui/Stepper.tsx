@@ -1,9 +1,8 @@
 'use client'
 
-import React, { createContext, useContext, useState } from 'react'
 import { cn } from '@/lib/utils/classnames'
+import React, { createContext, useContext, useState } from 'react'
 
-// Types
 interface StepperContextType {
   currentStep: number
   totalSteps: number
@@ -61,7 +60,7 @@ export const Stepper: React.FC<StepperProps> & {
   const [currentStep, setCurrentStep] = useState(initialStep)
   const childrenArray = React.Children.toArray(children)
   const totalSteps = childrenArray.filter(
-    (child) => React.isValidElement(child) && child.type === Step
+    (child) => React.isValidElement(child) && child.type === Step,
   ).length
 
   const goToStep = (step: number) => {
@@ -98,7 +97,7 @@ export const Stepper: React.FC<StepperProps> & {
       }}
     >
       <div className={cn('w-full', className)}>
-        <div className="mb-8">
+        <div className="mb-8 w-full">
           <div className="flex items-center justify-between">
             {Array.from({ length: totalSteps }).map((_, index) => {
               const isActive = index === currentStep
@@ -118,7 +117,7 @@ export const Stepper: React.FC<StepperProps> & {
                             isCompleted,
                           'border-muted-foreground bg-background text-muted-foreground':
                             !isActive && !isCompleted,
-                        }
+                        },
                       )}
                     >
                       {isCompleted ? (
@@ -145,12 +144,15 @@ export const Stepper: React.FC<StepperProps> & {
                       {React.Children.toArray(children)
                         .filter(
                           (child) =>
-                            React.isValidElement(child) && child.type === Step
+                            React.isValidElement(child) && child.type === Step,
                         )
                         .map((child, i) => {
                           if (React.isValidElement(child) && i === index) {
                             return (
-                              <div key={i} className="w-32 px-2">
+                              <div
+                                key={i}
+                                className="w-32 px-2 flex-col items-center"
+                              >
                                 <div
                                   className={cn('text-sm font-medium', {
                                     'text-primary': isActive || isCompleted,
@@ -195,12 +197,21 @@ export const Stepper: React.FC<StepperProps> & {
 }
 
 // Step Component (for header/title)
-const Step: React.FC<StepProps> = ({ children, title, description, className }) => {
+const Step: React.FC<StepProps> = ({
+  children,
+  title,
+  description,
+  className,
+}) => {
   return <div className={className}>{children}</div>
 }
 
 // Step Content Component
-const StepContent: React.FC<StepContentProps> = ({ children, step, className }) => {
+const StepContent: React.FC<StepContentProps> = ({
+  children,
+  step,
+  className,
+}) => {
   const { currentStep } = useStepper()
 
   if (step !== currentStep) return null
