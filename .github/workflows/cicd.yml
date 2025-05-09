@@ -61,12 +61,12 @@ jobs:
           docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$SHA_TAG \
                        -t $ECR_REGISTRY/$ECR_REPOSITORY:$DATE_TAG \
                        -t $ECR_REGISTRY/$ECR_REPOSITORY:latest .
-          
+
           # 모든 태그 푸시
           docker push $ECR_REGISTRY/$ECR_REPOSITORY:$SHA_TAG
           docker push $ECR_REGISTRY/$ECR_REPOSITORY:$DATE_TAG
           docker push $ECR_REGISTRY/$ECR_REPOSITORY:latest
-          
+
           # 배포에 사용할 태그 저장 (Git 커밋 해시)
           echo "DEPLOY_TAG=$SHA_TAG" >> $GITHUB_ENV
 
