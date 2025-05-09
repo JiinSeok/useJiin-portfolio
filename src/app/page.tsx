@@ -1,9 +1,9 @@
 'use client'
 
-import { Button } from '@/components/ui/Button'
 import LanguageSwitcher from '@/components/LanguageSwitcher'
-import { useTranslations } from 'next-intl'
+import { Button } from '@/components/ui/Button'
 import { Link } from '@/navigation'
+import { useTranslations } from 'next-intl'
 
 export default function HomePage() {
   const t = useTranslations('HomePage')
@@ -36,7 +36,7 @@ export default function HomePage() {
           </Link>
         </div>
         <div className="flex items-center space-x-4">
-          {/*<LanguageSwitcher />*/}
+          <LanguageSwitcher />
           <Button className="bg-primary text-primary-foreground hover:bg-primary/90">
             {t('nav.get-started')}
           </Button>
@@ -489,7 +489,6 @@ export default function HomePage() {
   )
 }
 
-
 // import { defaultLocale, locales } from '@/i18n/request'
 // import { headers } from 'next/headers'
 // import { redirect } from '@/navigation'
@@ -514,7 +513,7 @@ export default function HomePage() {
 //       languages.sort((a, b) => b.q - a.q)
 //
 //       // Find the first supported language
-//       const preferredLanguage = languages.find(lang => 
+//       const preferredLanguage = languages.find(lang =>
 //         locales.includes(lang.language)
 //       )
 //

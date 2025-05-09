@@ -1,76 +1,125 @@
 {
   "HomePage": {
-    "sign-in.success": "Sign in successful",
-    "sign-in.fail": "Incorrect username or password",
-    "error.unknown": "An error occurred. Please try again later",
-
-    "nav.features": "Features",
-    "nav.benefits": "Benefits",
-    "nav.contact": "Contact",
-    "nav.get-started": "Get Started",
-
-    "hero.title": "Next Generation",
-    "hero.title-highlight1": "Cost Analytics",
-    "hero.title-highlight2": "AI Platform",
-    "hero.description": "Build, deploy, and manage AI applications with ease. NEXCA provides the tools you need to bring your AI ideas to life.",
-    "hero.cta-trial": "Start Free Trial",
-    "hero.cta-demo": "Watch Demo",
-    "hero.ai-assistant": "AI Assistant",
-    "hero.ai-question": "How can I optimize my AI model for better performance?",
-    "hero.ai-answer": "To optimize your AI model, consider: reducing complexity, using transfer learning, optimizing hyperparameters, and implementing early stopping.",
-
-    "features.title": "Powerful Features",
-    "features.description": "Everything you need to build and deploy AI applications at scale",
-    "features.model-management.title": "AI Model Management",
-    "features.model-management.description": "Easily manage and deploy your AI models with version control and monitoring.",
-    "features.analytics.title": "Real-time Analytics",
-    "features.analytics.description": "Get insights into your AI applications with real-time analytics and monitoring.",
-    "features.infrastructure.title": "Scalable Infrastructure",
-    "features.infrastructure.description": "Scale your AI applications with our cloud-native infrastructure.",
-    "features.collaboration.title": "Collaborative Workspace",
-    "features.collaboration.description": "Work together with your team in a collaborative environment.",
-    "features.api.title": "API Integration",
-    "features.api.description": "Integrate with your existing systems using our comprehensive API.",
-    "features.security.title": "Security & Compliance",
-    "features.security.description": "Enterprise-grade security and compliance features to protect your data.",
-
-    "benefits.title": "Why Choose NEXCA",
-    "benefits.description": "Our platform provides unique advantages for businesses of all sizes",
-    "benefits.productivity.title": "Increased Productivity",
-    "benefits.productivity.description": "Automate repetitive tasks and focus on what matters most.",
-    "benefits.costs.title": "Reduced Costs",
-    "benefits.costs.description": "Save on infrastructure and development costs with our platform.",
-    "benefits.time-to-market.title": "Faster Time to Market",
-    "benefits.time-to-market.description": "Deploy AI applications faster with our streamlined workflow.",
-    "benefits.metrics.title": "Performance Metrics",
-    "benefits.metrics.subtitle": "Real-time analytics",
-    "benefits.metrics.accuracy": "Accuracy",
-    "benefits.metrics.response-time": "Response Time",
-    "benefits.metrics.uptime": "Uptime",
-
-    "cta.title": "Ready to Get Started?",
-    "cta.description": "Join thousands of companies that are already using NEXCA to build and deploy AI applications.",
-    "cta.trial": "Start Free Trial",
-    "cta.contact": "Contact Sales",
-
-    "footer.description": "Next Generation AI Platform for building, deploying, and managing AI applications.",
-    "footer.product": "Product",
-    "footer.features": "Features",
-    "footer.pricing": "Pricing",
-    "footer.documentation": "Documentation",
-    "footer.api": "API",
-    "footer.company": "Company",
-    "footer.about": "About",
-    "footer.blog": "Blog",
-    "footer.careers": "Careers",
-    "footer.contact": "Contact",
-    "footer.legal": "Legal",
-    "footer.privacy": "Privacy Policy",
-    "footer.terms": "Terms of Service",
-    "footer.cookies": "Cookie Policy",
-    "footer.copyright": "© {year} NEXCA. All rights reserved.",
-    "footer.social.twitter": "Twitter",
-    "footer.social.github": "GitHub",
-    "footer.social.linkedin": "LinkedIn"
+    "title": "NEXCA - Next Generation AI Platform",
+    "description": "Build, deploy, and manage AI applications with ease. NEXCA provides the tools you need to bring your AI ideas to life.",
+    "error": {
+      "unknown": "An error occurred. Please try again later"
+    },
+    "nav": {
+      "features": "Features",
+      "benefits": "Benefits",
+      "contact": "Contact",
+      "get-started": "Get Started"
+    },
+    "hero": {
+      "title": "Next Generation",
+      "title-highlight1": "Cost Analytics",
+      "title-highlight2": "AI Platform",
+      "description": "Build, deploy, and manage AI applications with ease. NEXCA provides the tools you need to bring your AI ideas to life.",
+      "cta-trial": "Start Free Trial",
+      "cta-demo": "Watch Demo",
+      "cta-contact": "Contact Sales",
+      "ai-assistant": "AI Assistant",
+      "ai-question": "How can I optimize my AI model for better performance?",
+      "ai-answer": "To optimize your AI model, consider: reducing complexity, using transfer learning, optimizing hyperparameters, and implementing early stopping."
+    },
+    "features": {
+      "title": "Powerful Features",
+      "description": "Everything you need to build and deploy AI applications at scale",
+      "model-management": {
+        "title": "AI Model Management",
+        "description": "Easily manage and deploy your AI models with version control and monitoring."
+      },
+      "analytics": {
+        "title": "Real-time Analytics",
+        "description": "Get insights into your AI applications with real-time analytics and monitoring."
+      },
+      "infrastructure": {
+        "title": "Scalable Infrastructure",
+        "description": "Scale your AI applications with our cloud-native infrastructure."
+      },
+      "collaboration": {
+        "title": "Collaborative Workspace",
+        "description": "Work together with your team in a collaborative environment."
+      },
+      "api": {
+        "title": "API Integration",
+        "description": "Integrate with your existing systems using our comprehensive API."
+      },
+      "security": {
+        "title": "Security & Compliance",
+        "description": "Enterprise-grade security and compliance features to protect your data."
+      }
+    },
+    "benefits": {
+      "title": "Why Choose NEXCA",
+      "description": "Our platform provides unique advantages for businesses of all sizes",
+      "productivity": {
+        "title": "Increased Productivity",
+        "description": "Automate repetitive tasks and focus on what matters most."
+      },
+      "costs": {
+        "title": "Reduced Costs",
+        "description": "Save on infrastructure and development costs with our platform."
+      },
+      "time-to-market": {
+        "title": "Faster Time to Market",
+        "description": "Deploy AI applications faster with our streamlined workflow."
+      },
+      "metrics": {
+        "title": "Performance Metrics",
+        "subtitle": "Real-time analytics",
+        "accuracy": "Accuracy",
+        "response-time": "Response Time",
+        "uptime": "Uptime"
+      }
+    },
+    "cta": {
+      "title": "Ready to Get Started?",
+      "description": "Join thousands of companies that are already using NEXCA to build and deploy AI applications.",
+      "trial": "Start Free Trial",
+      "contact": "Contact Sales"
+    },
+    "footer": {
+      "description": "Next Generation AI Platform for building, deploying, and managing AI applications.",
+      "product": "Product",
+      "features": "Features",
+      "pricing": "Pricing",
+      "documentation": "Documentation",
+      "api": "API",
+      "company": "Company",
+      "about": "About",
+      "blog": "Blog",
+      "careers": "Careers",
+      "contact": "Contact",
+      "legal": "Legal",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "cookies": "Cookie Policy",
+      "copyright": "© {year} NEXCA. All rights reserved.",
+      "social": {
+        "twitter": "Twitter",
+        "github": "GitHub",
+        "linkedin": "LinkedIn"
+      }
+    }
+  },
+  "ContactPage": {
+    "title": "Contact NEXCA",
+    "description": "Have a question or feedback about NEXCA? Fill out the form below and we'll get back to you as soon as possible.",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "submit": "Submit"
+    },
+    "success-message": {
+      "title": "Message sent successfully!",
+      "description": "We'll be in touch soon."
+    },
+    "error-message": {
+      "title": "Something went wrong.",
+      "description": "Please try again."
+    }
   }
 }
