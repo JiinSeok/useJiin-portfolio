@@ -1,12 +1,17 @@
 'use client'
 
 import LanguageSwitcher from '@/components/LanguageSwitcher'
+import { Accordion, AccordionItem } from '@/components/ui/Accordion'
 import { Button } from '@/components/ui/Button'
+import ContactDialog, { useContactDialog } from '@/components/ui/ContactDialog'
+import { Input } from '@/components/ui/Input'
 import { Link } from '@/navigation'
 import { useTranslations } from 'next-intl'
 
 export default function HomePage() {
   const t = useTranslations('HomePage')
+  const { openContactDialog, closeContactDialog, isContactDialogOpen } =
+    useContactDialog()
 
   return (
     <div className="flex flex-col items-center">
@@ -28,12 +33,12 @@ export default function HomePage() {
           >
             {t('nav.benefits')}
           </Link>
-          <Link
-            href="/register"
+          <button
+            onClick={openContactDialog}
             className="text-foreground hover:text-primary transition-colors"
           >
             {t('nav.contact')}
-          </Link>
+          </button>
         </div>
         <div className="flex items-center space-x-4">
           <LanguageSwitcher />
@@ -301,8 +306,97 @@ export default function HomePage() {
               size="lg"
               variant="outline"
               className="border-primary text-primary hover:bg-primary/10"
+              onClick={openContactDialog}
             >
               {t('cta.contact')}
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section id="faq" className="w-full py-20 bg-secondary/10">
+        <div className="max-w-4xl mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl tablet:text-4xl font-bold mb-4">
+              {t('faq.title') || 'Frequently Asked Questions'}
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              {t('faq.description') ||
+                'Find answers to common questions about our platform.'}
+            </p>
+          </div>
+
+          <div className="bg-card rounded-lg p-6 shadow-sm">
+            <Accordion>
+              <AccordionItem title={t('faq.q1') || 'What is NEXCA?'}>
+                <p>
+                  {t('faq.a1') ||
+                    'NEXCA is an AI model management platform that helps teams build, deploy, and monitor AI models at scale. Our platform provides tools for model training, deployment, monitoring, and collaboration.'}
+                </p>
+              </AccordionItem>
+
+              <AccordionItem title={t('faq.q2') || 'How does pricing work?'}>
+                <p>
+                  {t('faq.a2') ||
+                    'We offer flexible pricing plans based on your needs. Our starter plan is free and includes basic features. For more advanced features, we offer premium plans starting at $99/month. Contact us for enterprise pricing.'}
+                </p>
+              </AccordionItem>
+
+              <AccordionItem
+                title={t('faq.q3') || 'Do you offer a free trial?'}
+              >
+                <p>
+                  {t('faq.a3') ||
+                    'Yes, we offer a 14-day free trial of our premium features. No credit card required. You can sign up and start using our platform right away.'}
+                </p>
+              </AccordionItem>
+
+              <AccordionItem
+                title={t('faq.q4') || 'How secure is your platform?'}
+              >
+                <p>
+                  {t('faq.a4') ||
+                    'Security is our top priority. We use industry-standard encryption, regular security audits, and follow best practices for data protection. Your data is always encrypted both in transit and at rest.'}
+                </p>
+              </AccordionItem>
+
+              <AccordionItem
+                title={t('faq.q5') || 'Can I integrate with my existing tools?'}
+              >
+                <p>
+                  {t('faq.a5') ||
+                    'Yes, our platform offers robust API and integration options. You can connect with popular tools like GitHub, Slack, Jira, and more. We also provide webhooks for custom integrations.'}
+                </p>
+              </AccordionItem>
+            </Accordion>
+          </div>
+        </div>
+      </section>
+
+      {/* Release Notification Section */}
+      <section
+        id="release-notification"
+        className="w-full py-20 bg-gradient-to-b from-background to-secondary/20"
+      >
+        <div className="max-w-4xl mx-auto px-4 text-center">
+          <h2 className="text-3xl tablet:text-4xl font-bold mb-4">
+            {t('release.title') || '출시 소식 받기'}
+          </h2>
+          <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+            {t('release.description') ||
+              '새로운 기능과 업데이트 소식을 가장 먼저 받아보세요.'}
+          </p>
+          <div className="flex flex-col mobile:flex-row gap-4 max-w-md mx-auto">
+            <Input
+              type="email"
+              placeholder={
+                t('release.email-placeholder') || '이메일 주소를 입력하세요'
+              }
+              className="flex-grow"
+            />
+            <Button className="bg-primary text-primary-foreground hover:bg-primary/90">
+              {t('release.subscribe') || '구독하기'}
             </Button>
           </div>
         </div>
@@ -485,6 +579,12 @@ export default function HomePage() {
           </div>
         </div>
       </footer>
+
+      {/* Contact Dialog */}
+      <ContactDialog
+        isOpen={isContactDialogOpen}
+        onRequestCloseAction={closeContactDialog}
+      />
     </div>
   )
 }
