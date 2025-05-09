@@ -15,6 +15,7 @@ export default function Step3Confirmation({
 }: Step3ConfirmationProps) {
   // 번역 훅 사용
   const t = useTranslations('StepperDialog')
+  const { prevStep } = useStepper()
 
   return (
     <>
@@ -93,8 +94,6 @@ export default function Step3Confirmation({
           type="button"
           variant="outline"
           onClick={() => {
-            // 이전 단계로 돌아가기
-            const { prevStep } = useStepper()
             prevStep()
           }}
         >

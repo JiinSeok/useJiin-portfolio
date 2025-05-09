@@ -14,6 +14,7 @@ interface Step2FormProps {
 export default function Step2Form({ formData, onSubmit }: Step2FormProps) {
   // 번역 훅 사용
   const t = useTranslations('StepperDialog')
+  const { prevStep } = useStepper()
 
   return (
     <Form formId="contact-step2" onSubmit={onSubmit} defaultValues={formData}>
@@ -85,15 +86,7 @@ export default function Step2Form({ formData, onSubmit }: Step2FormProps) {
 
       {/* 이전/다음 버튼 */}
       <div className="mt-8 flex justify-between">
-        <Button
-          type="button"
-          variant="outline"
-          onClick={() => {
-            // 이전 단계로 돌아가기
-            const { prevStep } = useStepper()
-            prevStep()
-          }}
-        >
+        <Button type="button" variant="outline" onClick={() => prevStep()}>
           {t('back') || '이전'}
         </Button>
         <Form.SubmitButton>{t('next') || '다음'}</Form.SubmitButton>

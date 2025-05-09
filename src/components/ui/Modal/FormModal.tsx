@@ -11,7 +11,6 @@ import Form from '@/components/Form/Form'
 import { Button } from '@/components/ui/Button'
 import Modal, { ModalProps } from '@/components/ui/Modal/Modal'
 import { cn } from '@/lib/utils/classnames'
-import { X } from 'lucide-react'
 import { FieldValues } from 'react-hook-form'
 
 export default function FormModal({

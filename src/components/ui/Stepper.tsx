@@ -197,12 +197,7 @@ export const Stepper: React.FC<StepperProps> & {
 }
 
 // Step Component (for header/title)
-const Step: React.FC<StepProps> = ({
-  children,
-  title,
-  description,
-  className,
-}) => {
+const Step: React.FC<StepProps> = ({ children, className }) => {
   return <div className={className}>{children}</div>
 }
 

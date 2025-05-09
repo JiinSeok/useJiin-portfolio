@@ -20,7 +20,9 @@
     },
     "import/resolver": {
       "node": {
-        "paths": ["src"]
+        "paths": [
+          "src"
+        ]
       }
     }
   },
@@ -31,14 +33,17 @@
   },
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "project": ["./tsconfig.json"],
+    "project": null,
     "ecmaVersion": 2023,
     "ecmaFeatures": {
       "jsx": true
     },
     "sourceType": "module"
   },
-  "plugins": ["@typescript-eslint", "react"],
+  "plugins": [
+    "@typescript-eslint",
+    "react"
+  ],
   "rules": {
     "import/no-absolute-path": [
       "error",
@@ -52,9 +57,15 @@
   },
   "overrides": [
     {
-      "files": ["src/**/*.{ts,tsx}", "public/**"],
+      "files": [
+        "src/**/*.{ts,tsx}",
+        "public/**"
+      ],
       "rules": {
-        "semi": ["warn", "never"],
+        "semi": [
+          "warn",
+          "never"
+        ],
         "react/jsx-uses-vars": "warn",
         "react/jsx-key": "error",
         "react/prop-types": "off",
