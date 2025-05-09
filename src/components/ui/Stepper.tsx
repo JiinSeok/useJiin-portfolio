@@ -143,7 +143,7 @@ export const Stepper: React.FC<StepperProps> & {
                     <div className="absolute mt-16 text-center">
                       {React.Children.toArray(children)
                         .filter(
-                          (child) =>
+                          (child): child is React.ReactElement<StepProps> =>
                             React.isValidElement(child) && child.type === Step,
                         )
                         .map((child, i) => {
