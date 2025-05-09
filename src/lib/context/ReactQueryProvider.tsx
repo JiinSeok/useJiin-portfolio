@@ -1,9 +1,7 @@
 'use client'
 
-import { api } from '@/lib/config/apiClient'
 import handleError from '@/lib/utils/errorHandler'
 import { ComponentProps } from '@/types/types'
-import { User } from '@/types/userTypes'
 import {
   MutationCache,
   QueryCache,
@@ -49,17 +47,17 @@ export default function ReactQueryProvider({ children }: ComponentProps) {
     })
 
     // 초기 쿼리 프리패치
-    initialQueryClient
-      .prefetchQuery<User>({
-        queryKey: ['user'],
-        queryFn: async () => {
-          const res = await api.get('/users/me')
-          return res.data
-        },
-        retry: 1, // Retry at once if the request fails
-        staleTime: 5 * 60 * 1000, // Consider data fresh for 5 minutes
-      })
-      .then()
+    // initialQueryClient
+    //   .prefetchQuery<User>({
+    //     queryKey: ['user'],
+    //     queryFn: async () => {
+    //       const res = await api.get('/users/me')
+    //       return res.data
+    //     },
+    //     retry: 1, // Retry at once if the request fails
+    //     staleTime: 5 * 60 * 1000, // Consider data fresh for 5 minutes
+    //   })
+    //   .then()
     return initialQueryClient
   })
 
