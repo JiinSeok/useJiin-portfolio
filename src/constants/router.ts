@@ -1,36 +1,53 @@
+/**
+ * Router constants for the portfolio site
+ *
+ * Each route object contains:
+ * - path: The URL path for the route
+ * - getName: A function that returns the display name for the route
+ */
 export const ROUTER = {
+  // Main pages
   Home: {
-    path: '/', // 페이지 라우트
-    getName: (customName?: string) => customName || 'Home', // 가변 페이지 이름 (실제 사용 시 전달한 값 우선)
+    path: '/',
+    getName: (customName?: string) => customName || 'Home',
   },
-  SignIn: {
-    path: '/sign-in',
-    getName: (customName?: string) => customName || 'Sign In',
+
+  // Portfolio sections (these are anchor links on the home page)
+  UXDesign: {
+    path: '/#ux-design',
+    getName: (customName?: string) => customName || 'UX Design',
   },
-  // @TODO SignUp
-  // @TODO SignOut
-  SuspendedAccount: {
-    path: '/_suspended-account',
-    getName: (customName?: string) => customName || 'Suspended Account',
+  TechStack: {
+    path: '/#tech-stack',
+    getName: (customName?: string) => customName || 'Tech Stack',
   },
-  Me: {
-    path: '/me',
-    getName: (customName?: string) => customName || 'My Page',
+  Resume: {
+    path: '/#resume',
+    getName: (customName?: string) => customName || 'Resume',
   },
-  AIAgent: {
-    path: '/ai-agent',
-    getName: (customName?: string) => customName || 'AI Agent',
+  TIL: {
+    path: '/#til',
+    getName: (customName?: string) => customName || 'Today I Learned',
   },
-  AppManagement: {
-    path: '/app-management',
-    getName: (customName?: string) => customName || 'App Management',
+  Contact: {
+    path: '/#contact',
+    getName: (customName?: string) => customName || 'Contact',
   },
-  AccountManagement: {
-    path: '/account-management',
-    getName: (customName?: string) => customName || 'Account Management',
+
+  // External links
+  GitHub: {
+    path: 'https://github.com/JiinSeok',
+    getName: (customName?: string) => customName || 'GitHub',
+    external: true,
   },
-  AdminAppManagement: {
-    path: '/_admin/dashboard/app-management',
-    getName: (customName?: string) => customName || 'Admin App Management',
+  LinkedIn: {
+    path: 'https://linkedin.com/in/jiin-seok',
+    getName: (customName?: string) => customName || 'LinkedIn',
+    external: true,
+  },
+  Email: {
+    path: 'mailto:seokjiin1073@gmail.com',
+    getName: (customName?: string) => customName || 'Email',
+    external: true,
   },
 } as const
