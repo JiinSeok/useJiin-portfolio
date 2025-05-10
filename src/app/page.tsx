@@ -24,7 +24,7 @@ export default function HomePage() {
       {/* Navigation */}
       <nav className="w-full max-w-7xl mx-auto px-4 py-6 flex justify-between items-center">
         <div className="flex items-center">
-          <span className="text-2xl font-bold text-primary">NEXCA</span>
+          <span className="text-2xl font-bold text-primary">석지인</span>
         </div>
         <div className="hidden md:flex space-x-8">
           <Link
@@ -335,44 +335,44 @@ export default function HomePage() {
 
           <div className="bg-card rounded-lg p-6 shadow-sm">
             <Accordion>
-              <AccordionItem title={t('faq.q1') || 'What is NEXCA?'}>
+              <AccordionItem title={t('faq.q1') || '어떤 개발자인가요?'}>
                 <p>
                   {t('faq.a1') ||
-                    'NEXCA is an AI model management platform that helps teams build, deploy, and monitor AI models at scale. Our platform provides tools for model training, deployment, monitoring, and collaboration.'}
+                    '구조화, 공통화, 표준화, 자동화가 만든 여유 덕분에 많은 문제를 해결했고, 이 가치를 모든 사용자에게 전하고 싶은 프론트엔드 개발자입니다.'}
                 </p>
               </AccordionItem>
 
-              <AccordionItem title={t('faq.q2') || 'How does pricing work?'}>
+              <AccordionItem title={t('faq.q2') || '어떤 경험이 있나요?'}>
                 <p>
                   {t('faq.a2') ||
-                    'We offer flexible pricing plans based on your needs. Our starter plan is free and includes basic features. For more advanced features, we offer premium plans starting at $99/month. Contact us for enterprise pricing.'}
+                    '물류 및 스포츠 도메인의 업무 전산화/자동화 스타트업에서 일했습니다. ERP를 비롯한 WMS(창고)/OMS(주문) 앱을 운영하며, 관행적이고 불분명한 업무를 직접 발굴해 전산화했습니다.'}
                 </p>
               </AccordionItem>
 
               <AccordionItem
-                title={t('faq.q3') || 'Do you offer a free trial?'}
+                title={t('faq.q3') || '팀 협업에 대한 경험은 어떤가요?'}
               >
                 <p>
                   {t('faq.a3') ||
-                    'Yes, we offer a 14-day free trial of our premium features. No credit card required. You can sign up and start using our platform right away.'}
+                    '고객의 업무를 효율화한 앱처럼, 팀의 업무를 효율화하는 시스템을 만들었습니다. 이슈/버그 트래커, 용어집을 만들어 커뮤니케이션 비용을 줄였습니다.'}
                 </p>
               </AccordionItem>
 
               <AccordionItem
-                title={t('faq.q4') || 'How secure is your platform?'}
+                title={t('faq.q4') || '주요 기술 스택은 무엇인가요?'}
               >
                 <p>
                   {t('faq.a4') ||
-                    'Security is our top priority. We use industry-standard encryption, regular security audits, and follow best practices for data protection. Your data is always encrypted both in transit and at rest.'}
+                    'TypeScript, Next.js, React.js를 주로 사용하며, 상태 관리를 위해 Zustand, React Query, Context API 등을 활용합니다. 스타일링은 Tailwind CSS, SCSS, CSS Module을 상황에 맞게 사용합니다.'}
                 </p>
               </AccordionItem>
 
               <AccordionItem
-                title={t('faq.q5') || 'Can I integrate with my existing tools?'}
+                title={t('faq.q5') || '현재 어떤 일을 하고 있나요?'}
               >
                 <p>
                   {t('faq.a5') ||
-                    'Yes, our platform offers robust API and integration options. You can connect with popular tools like GitHub, Slack, Jira, and more. We also provide webhooks for custom integrations.'}
+                    '현재는 B2B SaaS 창업 팀에서 MVP를 맡아 요구사항의 빠른 구현을 위한 상태관리 구조 리팩토링을 진행 중입니다. 고객이 당연하게 기대하는 경험부터 감동하는 경험까지 제약 없이 그려내기 위해 계속해서 도전하고 있습니다.'}
                 </p>
               </AccordionItem>
             </Accordion>
@@ -413,7 +413,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
             <div>
-              <h3 className="text-lg font-semibold mb-4">NEXCA</h3>
+              <h3 className="text-lg font-semibold mb-4">석지인</h3>
               <p className="text-muted-foreground">{t('footer.description')}</p>
             </div>
             <div>

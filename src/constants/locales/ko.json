@@ -1,102 +1,102 @@
 {
   "HomePage": {
-    "title": "NEXCA - 차세대 AI 플랫폼",
-    "description": "AI 애플리케이션을 쉽게 구축, 배포 및 관리하세요. NEXCA는 AI 아이디어를 실현하는 데 필요한 도구를 제공합니다.",
+    "title": "석지인 - 프론트엔드 개발자 포트폴리오",
+    "description": "Pain Point를 위한 문제 해결, 실전형 프론트엔드 개발자 석지인의 포트폴리오입니다.",
     "error": {
       "unknown": "문제가 발생했어요. 잠시 후 다시 시도해주세요"
     },
     "nav": {
-      "features": "기능",
-      "benefits": "장점",
+      "features": "프로젝트",
+      "benefits": "기술 스택",
       "contact": "문의하기",
-      "get-started": "시작하기"
+      "get-started": "이력서"
     },
     "hero": {
-      "title": "차세대",
-      "title-highlight1": "비용 분석",
-      "title-highlight2": "AI 플랫폼",
-      "description": "AI 애플리케이션을 쉽게 구축, 배포 및 관리하세요. NEXCA는 AI 아이디어를 실현하는 데 필요한 도구를 제공합니다.",
-      "cta-trial": "무료 체험 시작",
-      "cta-demo": "데모 보기",
-      "cta-contact": "영업팀 문의",
-      "ai-assistant": "AI 어시스턴트",
-      "ai-question": "AI 모델의 성능을 최적화하려면 어떻게 해야 하나요?",
-      "ai-answer": "AI 모델을 최적화하려면 복잡성 감소, 전이 학습 사용, 하이퍼파라미터 최적화, 조기 중단 구현을 고려하세요."
+      "title": "Pain Point를 위한",
+      "title-highlight1": "문제 해결",
+      "title-highlight2": "프론트엔드 개발자",
+      "description": "안녕하세요. 구조화, 공통화, 표준화, 자동화가 만든 여유 덕분에 많은 문제를 해결했고, 이 가치를 모든 사용자에게 전하고 싶은 프론트엔드 개발자 석지인입니다.",
+      "cta-trial": "이력서 보기",
+      "cta-demo": "프로젝트 살펴보기",
+      "cta-contact": "문의하기",
+      "ai-assistant": "개발자 소개",
+      "ai-question": "어떤 개발자인가요?",
+      "ai-answer": "고객에게 Pain Point에 알맞은 효율을 선물하도록, 익숙한 수작업보다 어려운 일이 되어버리지는 않도록, 믿을 수 있고 이해할 수 있는 프론트엔드를 위해 함께 노력하고 싶습니다."
     },
     "features": {
-      "title": "강력한 기능",
-      "description": "대규모 AI 애플리케이션을 구축하고 배포하는 데 필요한 모든 것",
+      "title": "프로젝트",
+      "description": "사용자 경험을 위한 프론트엔드 개발 측면의 설계 & 실험",
       "model-management": {
-        "title": "AI 모델 관리",
-        "description": "버전 관리 및 모니터링으로 AI 모델을 쉽게 관리하고 배포하세요."
+        "title": "UX를 위한 프론트엔드 설계",
+        "description": "사용자 경험을 개선하기 위한 프론트엔드 아키텍처 설계 및 구현"
       },
       "analytics": {
-        "title": "실시간 분석",
-        "description": "실시간 분석 및 모니터링으로 AI 애플리케이션에 대한 인사이트를 얻으세요."
+        "title": "문제 해결 사례",
+        "description": "실제 프로젝트에서 발생한 문제를 해결한 경험과 접근 방식"
       },
       "infrastructure": {
-        "title": "확장 가능한 인프라",
-        "description": "클라우드 네이티브 인프라로 AI 애플리케이션을 확장하세요."
+        "title": "물류/스포츠 도메인 경험",
+        "description": "물류 및 스포츠 도메인의 업무 전산화/자동화 스타트업 경험"
       },
       "collaboration": {
-        "title": "협업 작업 공간",
-        "description": "협업 환경에서 팀과 함께 작업하세요."
+        "title": "팀 협업 시스템 구축",
+        "description": "이슈/버그 트래커, 용어집 등 팀 협업을 위한 시스템 개발"
       },
       "api": {
-        "title": "API 통합",
-        "description": "포괄적인 API를 사용하여 기존 시스템과 통합하세요."
+        "title": "TypeScript & Next.js",
+        "description": "타입스크립트와 Next.js를 활용한 웹 애플리케이션 개발 및 관리"
       },
       "security": {
-        "title": "보안 및 규정 준수",
-        "description": "데이터를 보호하기 위한 기업 수준의 보안 및 규정 준수 기능."
+        "title": "B2B SaaS MVP 개발",
+        "description": "B2B SaaS 창업 팀에서 MVP 개발 및 상태관리 구조 리팩토링"
       }
     },
     "benefits": {
-      "title": "NEXCA를 선택해야 하는 이유",
-      "description": "모든 규모의 기업에 제공하는 고유한 이점",
+      "title": "기술 스택",
+      "description": "프론트엔드 개발에 활용하는 기술과 경험",
       "productivity": {
-        "title": "생산성 향상",
-        "description": "반복적인 작업을 자동화하고 가장 중요한 일에 집중하세요."
+        "title": "프론트엔드 기술",
+        "description": "React.js, Next.js, TypeScript, HTML5/CSS3, JavaScript (ES6+) 등을 활용한 웹 애플리케이션 개발 경험"
       },
       "costs": {
-        "title": "비용 절감",
-        "description": "플랫폼을 통해 인프라 및 개발 비용을 절약하세요."
+        "title": "상태 관리",
+        "description": "Zustand, React Query, Context API, React Hook Form 등을 활용한 효율적인 상태 관리 구현"
       },
       "time-to-market": {
-        "title": "시장 출시 시간 단축",
-        "description": "간소화된 워크플로우로 AI 애플리케이션을 더 빠르게 배포하세요."
+        "title": "스타일링 & UI",
+        "description": "Tailwind CSS, SCSS, CSS Module, Styled-Components, Figma를 활용한 UI/UX 구현"
       },
       "metrics": {
-        "title": "성능 지표",
-        "subtitle": "실시간 분석",
-        "accuracy": "정확도",
-        "response-time": "응답 시간",
-        "uptime": "가동 시간"
+        "title": "기술 역량",
+        "subtitle": "주요 기술 스택",
+        "accuracy": "프론트엔드",
+        "response-time": "상태 관리",
+        "uptime": "인프라 & 협업"
       }
     },
     "cta": {
-      "title": "시작할 준비가 되셨나요?",
-      "description": "이미 NEXCA를 사용하여 AI 애플리케이션을 구축하고 배포하는 수천 개의 기업에 합류하세요.",
-      "trial": "무료 체험 시작",
-      "contact": "영업팀 문의"
+      "title": "함께 일해보세요",
+      "description": "물류 및 스포츠 도메인의 업무 전산화/자동화 경험과 B2B SaaS 개발 경험을 바탕으로 새로운 도전을 함께하고 싶습니다.",
+      "trial": "이력서 다운로드",
+      "contact": "연락하기"
     },
     "footer": {
-      "description": "AI 애플리케이션 구축, 배포 및 관리를 위한 차세대 AI 플랫폼.",
-      "product": "제품",
-      "features": "기능",
-      "pricing": "가격",
-      "documentation": "문서",
-      "api": "API",
-      "company": "회사",
+      "description": "Pain Point를 위한 문제 해결, 실전형 프론트엔드 개발자 석지인의 포트폴리오입니다.",
+      "product": "포트폴리오",
+      "features": "프로젝트",
+      "pricing": "기술 스택",
+      "documentation": "이력서",
+      "api": "Today I Learned",
+      "company": "연락처",
       "about": "소개",
       "blog": "블로그",
-      "careers": "채용",
+      "careers": "이메일",
       "contact": "문의하기",
-      "legal": "법률",
-      "privacy": "개인정보 처리방침",
-      "terms": "서비스 약관",
-      "cookies": "쿠키 정책",
-      "copyright": "© {year} NEXCA. 모든 권리 보유.",
+      "legal": "링크",
+      "privacy": "GitHub",
+      "terms": "LinkedIn",
+      "cookies": "블로그",
+      "copyright": "© {year} 석지인. 모든 권리 보유.",
       "social": {
         "twitter": "트위터",
         "github": "깃허브",
@@ -104,38 +104,38 @@
       }
     },
     "release": {
-      "title": "출시 소식 받기",
-      "description": "새로운 기능과 업데이트 소식을 가장 먼저 받아보세요.",
+      "title": "연락하기",
+      "description": "이메일을 남겨주시면 빠르게 답변 드리겠습니다.",
       "email-placeholder": "이메일 주소를 입력하세요",
-      "subscribe": "구독하기"
+      "subscribe": "보내기"
     },
     "faq": {
       "title": "자주 묻는 질문",
-      "description": "우리 플랫폼에 대한 일반적인 질문에 대한 답변을 찾아보세요.",
-      "q1": "NEXCA란 무엇인가요?",
-      "a1": "NEXCA는 팀이 AI 모델을 대규모로 구축, 배포 및 모니터링하는 데 도움이 되는 AI 모델 관리 플랫폼입니다. 우리 플랫폼은 모델 훈련, 배포, 모니터링 및 협업을 위한 도구를 제공합니다.",
-      "q2": "가격 책정은 어떻게 되나요?",
-      "a2": "우리는 귀하의 요구에 따라 유연한 가격 책정 계획을 제공합니다. 스타터 플랜은 무료이며 기본 기능을 포함합니다. 더 고급 기능을 위해 월 99달러부터 시작하는 프리미엄 플랜을 제공합니다. 기업 가격 책정에 대해서는 문의해 주세요.",
-      "q3": "무료 체험을 제공하나요?",
-      "a3": "네, 프리미엄 기능에 대한 14일 무료 체험을 제공합니다. 신용 카드가 필요하지 않습니다. 가입하고 바로 우리 플랫폼을 사용할 수 있습니다.",
-      "q4": "플랫폼은 얼마나 안전한가요?",
-      "a4": "보안은 우리의 최우선 과제입니다. 우리는 업계 표준 암호화, 정기적인 보안 감사를 사용하고 데이터 보호를 위한 모범 사례를 따릅니다. 귀하의 데이터는 전송 중이든 저장 중이든 항상 암호화됩니다.",
-      "q5": "기존 도구와 통합할 수 있나요?",
-      "a5": "네, 우리 플랫폼은 강력한 API 및 통합 옵션을 제공합니다. GitHub, Slack, Jira 등과 같은 인기 있는 도구와 연결할 수 있습니다. 또한 사용자 정의 통합을 위한 웹훅도 제공합니다."
+      "description": "프론트엔드 개발자 석지인에 대한 자주 묻는 질문들입니다.",
+      "q1": "어떤 개발자인가요?",
+      "a1": "구조화, 공통화, 표준화, 자동화가 만든 여유 덕분에 많은 문제를 해결했고, 이 가치를 모든 사용자에게 전하고 싶은 프론트엔드 개발자입니다. 고객에게 Pain Point에 알맞은 효율을 선물하도록, 익숙한 수작업보다 어려운 일이 되어버리지는 않도록, 믿을 수 있고 이해할 수 있는 프론트엔드를 위해 함께 노력하고 싶습니다.",
+      "q2": "어떤 경험이 있나요?",
+      "a2": "물류 및 스포츠 도메인의 업무 전산화/자동화 스타트업에서 일했습니다. ERP를 비롯한 WMS(창고)/OMS(주문) 앱을 운영하며, 운영 전에는 알 수 없었던 '재고 무관' 등의 관행적이고 불분명한 업무를 직접 발굴해 전산화했습니다. 이 같은 과정을 통해 앱은 업무 프로세스도, 개발 형태도 다른 여러 고객사의 업무를 포괄하게 되었고, SaaS 온보딩을 무사히 완료할 수 있었습니다.",
+      "q3": "팀 협업에 대한 경험은 어떤가요?",
+      "a3": "고객의 업무를 효율화한 앱처럼, 팀의 업무를 효율화하는 시스템을 만들었습니다. 7개월차 초기 스타트업에서는 이슈/버그 트래커, 용어집을 만들어 커뮤니케이션 비용을 줄였습니다. 7년차 스타트업에서는 자사 하드웨어와의 호환성, 워크플로우 정의를 위해서 TF를 진행했습니다. 이를 포함한 소프트웨어 지원 사양 정의로 무한 디버깅에 투입되던 개발 리소스를 절감하고 운영 혼란을 없앴습니다.",
+      "q4": "주요 기술 스택은 무엇인가요?",
+      "a4": "TypeScript, Next.js, React.js를 주로 사용하며, 상태 관리를 위해 Zustand, React Query, Context API 등을 활용합니다. 스타일링은 Tailwind CSS, SCSS, CSS Module을 상황에 맞게 사용합니다. 협업을 위해 Git, GitHub, Jira, Confluence, Notion 등의 도구를 활용합니다.",
+      "q5": "현재 어떤 일을 하고 있나요?",
+      "a5": "현재는 B2B SaaS 창업 팀에서 MVP를 맡아 요구사항의 빠른 구현을 위한 상태관리 구조 리팩토링을 진행 중입니다. 고객이 당연하게 기대하는 경험부터 감동하는 경험까지 제약 없이 그려내기 위해 계속해서 도전하고 있습니다."
     }
   },
   "ContactPage": {
-    "title": "NEXCA에 문의하기",
-    "description": "NEXCA에 대한 질문이나 피드백이 있으신가요? 아래 양식을 작성해 주시면 최대한 빨리 답변해 드리겠습니다.",
+    "title": "석지인에게 문의하기",
+    "description": "프로젝트 협업이나 채용 관련 문의가 있으신가요? 아래 양식을 작성해 주시면 최대한 빨리 답변해 드리겠습니다.",
     "form": {
       "name": "이름",
       "email": "이메일",
       "message": "메시지",
-      "submit": "제출하기"
+      "submit": "보내기"
     },
     "success-message": {
       "title": "메시지가 성공적으로 전송되었습니다!",
-      "description": "곧 연락드리겠습니다."
+      "description": "빠른 시일 내에 연락드리겠습니다."
     },
     "error-message": {
       "title": "문제가 발생했습니다.",
@@ -143,37 +143,37 @@
     }
   },
   "StepperDialog": {
-    "title": "문의하기",
-    "description": "아래 양식을 작성하여 문의사항을 보내주세요.",
+    "title": "연락하기",
+    "description": "아래 양식을 작성하여 메시지를 보내주세요.",
     "next": "다음",
     "back": "이전",
-    "submit": "제출하기",
+    "submit": "보내기",
     "step1": {
       "title": "기본 정보",
       "name": "이름",
       "namePlaceholder": "이름을 입력해 주세요",
       "email": "이메일",
       "emailPlaceholder": "이메일을 입력해 주세요",
-      "organization": "조직명",
-      "organizationPlaceholder": "조직명을 입력해 주세요 (선택사항)"
+      "organization": "회사/소속",
+      "organizationPlaceholder": "회사/소속을 입력해 주세요 (선택사항)"
     },
     "step2": {
-      "title": "문의 내용",
-      "subject": "문의 제목",
-      "subjectPlaceholder": "문의 제목을 입력해 주세요",
+      "title": "메시지 내용",
+      "subject": "제목",
+      "subjectPlaceholder": "제목을 입력해 주세요",
       "category": "문의 유형",
       "categoryPlaceholder": "문의 유형을 선택해 주세요",
       "categoryGeneral": "일반 문의",
-      "categoryTechnical": "기술 지원",
-      "categoryPricing": "가격 문의",
-      "categoryPartnership": "제휴 문의",
-      "message": "문의 내용",
-      "messagePlaceholder": "문의 내용을 자세히 입력해 주세요"
+      "categoryTechnical": "프로젝트 협업",
+      "categoryPricing": "채용 관련",
+      "categoryPartnership": "기타 문의",
+      "message": "메시지 내용",
+      "messagePlaceholder": "메시지 내용을 자세히 입력해 주세요"
     },
     "step3": {
       "title": "확인",
-      "summary": "문의 내용 확인",
-      "disclaimer": "제출하신 문의사항은 영업일 기준 1-2일 내에 답변드리겠습니다. 감사합니다."
+      "summary": "메시지 내용 확인",
+      "disclaimer": "보내주신 메시지는 확인 후 빠른 시일 내에 답변드리겠습니다. 감사합니다."
     }
   }
 }

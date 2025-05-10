@@ -9,10 +9,10 @@ import { getLocale } from 'next-intl/server'
 import { Suspense } from 'react'
 
 export const metadata: Metadata = {
-  title: 'NEXCA - Next Generation AI Platform',
+  title: '석지인 - 프론트엔드 개발자 포트폴리오',
   description:
-    'NEXCA is a next-generation AI platform that helps you build, deploy, and manage AI applications.',
-  keywords: 'AI, artificial intelligence, machine learning, platform, NEXCA',
+    'Pain Point를 위한 문제 해결, 실전형 프론트엔드 개발자 석지인의 포트폴리오입니다.',
+  keywords: '프론트엔드, 개발자, 포트폴리오, 석지인, React, Next.js, TypeScript',
 }
 
 export default async function LocaleLayout({ children }: LayoutProps) {
