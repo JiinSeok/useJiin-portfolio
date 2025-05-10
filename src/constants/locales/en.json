@@ -1,125 +1,185 @@
 {
   "HomePage": {
-    "title": "NEXCA - Next Generation AI Platform",
-    "description": "Build, deploy, and manage AI applications with ease. NEXCA provides the tools you need to bring your AI ideas to life.",
+    "title": "Jiin Seok - Frontend Developer",
+    "description": "Frontend developer who has solved many problems thanks to the freedom created by structuring, standardization, and automation, and wants to convey this value to all users.",
     "error": {
       "unknown": "An error occurred. Please try again later"
     },
     "nav": {
-      "features": "Features",
-      "benefits": "Benefits",
-      "contact": "Contact",
-      "get-started": "Get Started"
+      "ux-design": "Frontend Design for UX",
+      "tech-stack": "Tech Stack",
+      "resume": "Resume",
+      "til": "Today I Learned",
+      "contact": "Contact"
     },
     "hero": {
-      "title": "Next Generation",
-      "title-highlight1": "Cost Analytics",
-      "title-highlight2": "AI Platform",
-      "description": "Build, deploy, and manage AI applications with ease. NEXCA provides the tools you need to bring your AI ideas to life.",
-      "cta-trial": "Start Free Trial",
-      "cta-demo": "Watch Demo",
-      "cta-contact": "Contact Sales",
-      "ai-assistant": "AI Assistant",
-      "ai-question": "How can I optimize my AI model for better performance?",
-      "ai-answer": "To optimize your AI model, consider: reducing complexity, using transfer learning, optimizing hyperparameters, and implementing early stopping."
+      "title": "Problem Solving",
+      "title-highlight1": "Frontend Developer",
+      "title-highlight2": "for Pain Points",
+      "description": "Hello, I'm Jiin Seok, a frontend developer who has solved many problems thanks to the freedom created by structuring, standardization, and automation, and wants to convey this value to all users. I want to work together to provide efficiency for customer pain points, ensure that it doesn't become more difficult than familiar manual work, and create a reliable and understandable frontend.",
+      "cta-resume": "View Resume",
+      "cta-projects": "View Projects",
+      "cta-contact": "Contact Me",
+      "code-snippet": "Code Snippet",
+      "code-question": "What problems have you solved with TypeScript and Next.js?",
+      "code-answer": "I've improved user experience and development productivity through type safety and server-side rendering."
     },
-    "features": {
-      "title": "Powerful Features",
-      "description": "Everything you need to build and deploy AI applications at scale",
-      "model-management": {
-        "title": "AI Model Management",
-        "description": "Easily manage and deploy your AI models with version control and monitoring."
+    "ux-design": {
+      "title": "Frontend Design for UX",
+      "description": "This portfolio showcases frontend development design & experiments for user experience.",
+      "structure": {
+        "title": "Structured Design",
+        "description": "You can see the problem-solving process through summaries, diagrams, explanations, code examples, and GitHub links to core code."
       },
-      "analytics": {
-        "title": "Real-time Analytics",
-        "description": "Get insights into your AI applications with real-time analytics and monitoring."
+      "component": {
+        "title": "Component Design",
+        "description": "I've improved user experience consistency and development efficiency with reusable components."
       },
-      "infrastructure": {
-        "title": "Scalable Infrastructure",
-        "description": "Scale your AI applications with our cloud-native infrastructure."
+      "state-management": {
+        "title": "State Management",
+        "description": "I've implemented predictable data flow by efficiently managing complex states."
       },
-      "collaboration": {
-        "title": "Collaborative Workspace",
-        "description": "Work together with your team in a collaborative environment."
+      "performance": {
+        "title": "Performance Optimization",
+        "description": "I've secured fast loading speeds and responsiveness through rendering optimization and code splitting."
       },
-      "api": {
-        "title": "API Integration",
-        "description": "Integrate with your existing systems using our comprehensive API."
+      "accessibility": {
+        "title": "Accessibility",
+        "description": "I've adhered to web accessibility standards to ensure all users can easily use the application."
       },
-      "security": {
-        "title": "Security & Compliance",
-        "description": "Enterprise-grade security and compliance features to protect your data."
+      "testing": {
+        "title": "Testing Strategy",
+        "description": "I maintain a stable codebase through unit tests, integration tests, and E2E tests."
       }
     },
-    "benefits": {
-      "title": "Why Choose NEXCA",
-      "description": "Our platform provides unique advantages for businesses of all sizes",
-      "productivity": {
-        "title": "Increased Productivity",
-        "description": "Automate repetitive tasks and focus on what matters most."
+    "tech-stack": {
+      "title": "Tech Stack",
+      "description": "The main technologies and tools I use for frontend development.",
+      "frontend": {
+        "title": "Frontend Technologies",
+        "description": "Core technologies I use for implementing user interfaces."
       },
-      "costs": {
-        "title": "Reduced Costs",
-        "description": "Save on infrastructure and development costs with our platform."
+      "typescript": {
+        "title": "TypeScript",
+        "description": "I improve code quality and development productivity with a static type system."
       },
-      "time-to-market": {
-        "title": "Faster Time to Market",
-        "description": "Deploy AI applications faster with our streamlined workflow."
+      "react": {
+        "title": "React",
+        "description": "I build reusable UI with component-based architecture."
       },
-      "metrics": {
-        "title": "Performance Metrics",
-        "subtitle": "Real-time analytics",
-        "accuracy": "Accuracy",
-        "response-time": "Response Time",
-        "uptime": "Uptime"
+      "nextjs": {
+        "title": "Next.js",
+        "description": "I optimize performance and SEO with server-side rendering and static site generation."
+      },
+      "skills": {
+        "title": "Core Competencies",
+        "subtitle": "Technical Proficiency",
+        "typescript": "TypeScript",
+        "react": "React",
+        "nextjs": "Next.js"
       }
     },
-    "cta": {
-      "title": "Ready to Get Started?",
-      "description": "Join thousands of companies that are already using NEXCA to build and deploy AI applications.",
-      "trial": "Start Free Trial",
-      "contact": "Contact Sales"
+    "resume": {
+      "title": "Resume",
+      "description": "I've worked at startups focused on business computerization/automation in logistics and sports domains. Like the apps that streamlined customer operations, I've created systems that streamline team operations.",
+      "download": "Download Resume",
+      "contact": "Contact Me"
     },
     "footer": {
-      "description": "Next Generation AI Platform for building, deploying, and managing AI applications.",
-      "product": "Product",
-      "features": "Features",
-      "pricing": "Pricing",
-      "documentation": "Documentation",
-      "api": "API",
-      "company": "Company",
-      "about": "About",
+      "description": "Problem-solving frontend developer for pain points, Jiin Seok.",
+      "sections": "Sections",
+      "ux-design": "Frontend Design for UX",
+      "tech-stack": "Tech Stack",
+      "resume": "Resume",
+      "til": "Today I Learned",
+      "resources": "Resources",
+      "github": "GitHub",
       "blog": "Blog",
-      "careers": "Careers",
+      "projects": "Projects",
       "contact": "Contact",
-      "legal": "Legal",
-      "privacy": "Privacy Policy",
-      "terms": "Terms of Service",
-      "cookies": "Cookie Policy",
-      "copyright": "© {year} NEXCA. All rights reserved.",
+      "connect": "Connect",
+      "email": "Email",
+      "linkedin": "LinkedIn",
+      "github-profile": "GitHub Profile",
+      "copyright": "© {year} Jiin Seok. All rights reserved.",
       "social": {
-        "twitter": "Twitter",
         "github": "GitHub",
-        "linkedin": "LinkedIn"
+        "linkedin": "LinkedIn",
+        "email": "Email"
       }
+    },
+    "newsletter": {
+      "title": "Get Blog Updates",
+      "description": "Receive updates about new frontend development articles and project news.",
+      "email-placeholder": "Enter your email address",
+      "subscribe": "Subscribe"
+    },
+    "til": {
+      "title": "Today I Learned",
+      "description": "A technical blog where I organize what I've learned during frontend development.",
+      "q1": "What makes Next.js convenient?",
+      "a1": "Next.js makes React application development more convenient by providing various features such as server-side rendering (SSR), static site generation (SSG), file-based routing, API routes, and image optimization.",
+      "q2": "Why use TypeScript?",
+      "a2": "TypeScript improves code stability through a static type system and helps detect errors during development. It also enhances development productivity through IDE auto-completion features and helps with code documentation.",
+      "q3": "Why was React Query created?",
+      "a3": "React Query was created to solve the complexity of server state management. It simplifies API call-related state management by providing features such as caching, background updates, and data synchronization.",
+      "q4": "How do Type and Interface differ?",
+      "a4": "Type and Interface are two ways to define types in TypeScript. Interface is good for extensibility and allows declaration merging, while Type allows for more diverse type expressions such as union types and intersection types.",
+      "q5": "When and how should you specify types for useState?",
+      "a5": "You should explicitly specify types for useState using generics when type inference from the initial value is not sufficient. This is particularly useful for states that include null or undefined, or complex object types."
     }
   },
   "ContactPage": {
-    "title": "Contact NEXCA",
-    "description": "Have a question or feedback about NEXCA? Fill out the form below and we'll get back to you as soon as possible.",
+    "title": "Contact Jiin Seok",
+    "description": "If you have any inquiries about project collaboration, recruitment, or anything else, please fill out the form below. I'll respond as soon as possible.",
     "form": {
       "name": "Name",
       "email": "Email",
+      "subject": "Subject",
       "message": "Message",
-      "submit": "Submit"
+      "submit": "Contact"
     },
     "success-message": {
       "title": "Message sent successfully!",
-      "description": "We'll be in touch soon."
+      "description": "I'll respond as soon as possible. Thank you."
     },
     "error-message": {
       "title": "Something went wrong.",
-      "description": "Please try again."
+      "description": "Please try again or contact me directly at seokjiin1073@gmail.com."
+    }
+  },
+  "StepperDialog": {
+    "title": "Contact Jiin Seok",
+    "description": "Please fill out the form below to send your inquiry.",
+    "next": "Next",
+    "back": "Back",
+    "submit": "Contact",
+    "step1": {
+      "title": "Basic Information",
+      "name": "Name",
+      "namePlaceholder": "Please enter your name",
+      "email": "Email",
+      "emailPlaceholder": "Please enter your email",
+      "organization": "Affiliation",
+      "organizationPlaceholder": "Please enter your company/school (optional)"
+    },
+    "step2": {
+      "title": "Inquiry Details",
+      "subject": "Subject",
+      "subjectPlaceholder": "Please enter the subject of your inquiry",
+      "category": "Inquiry Type",
+      "categoryPlaceholder": "Please select the type of inquiry",
+      "categoryGeneral": "General Inquiry",
+      "categoryProject": "Project Collaboration",
+      "categoryJob": "Job-related",
+      "categoryTechnical": "Technical Question",
+      "message": "Message",
+      "messagePlaceholder": "Please enter the details of your inquiry"
+    },
+    "step3": {
+      "title": "Confirmation",
+      "summary": "Inquiry Summary",
+      "disclaimer": "I'll respond to your inquiry as soon as possible. Thank you."
     }
   }
 }

@@ -24,20 +24,32 @@ export default function HomePage() {
       {/* Navigation */}
       <nav className="w-full max-w-7xl mx-auto px-4 py-6 flex justify-between items-center">
         <div className="flex items-center">
-          <span className="text-2xl font-bold text-primary">석지인</span>
+          <span className="text-2xl font-bold text-primary">Jiin Seok</span>
         </div>
         <div className="hidden md:flex space-x-8">
           <Link
-            href="/"
+            href="#ux-design"
             className="text-foreground hover:text-primary transition-colors"
           >
-            {t('nav.features')}
+            {t('nav.ux-design')}
           </Link>
           <Link
-            href="/"
+            href="#tech-stack"
             className="text-foreground hover:text-primary transition-colors"
           >
-            {t('nav.benefits')}
+            {t('nav.tech-stack')}
+          </Link>
+          <Link
+            href="#resume"
+            className="text-foreground hover:text-primary transition-colors"
+          >
+            {t('nav.resume')}
+          </Link>
+          <Link
+            href="#til"
+            className="text-foreground hover:text-primary transition-colors"
+          >
+            {t('nav.til')}
           </Link>
           <button
             onClick={() => openModal('contactDialog')}
@@ -48,9 +60,6 @@ export default function HomePage() {
         </div>
         <div className="flex items-center space-x-4">
           <LanguageSwitcher />
-          <Button className="bg-primary text-primary-foreground hover:bg-primary/90">
-            {t('nav.get-started')}
-          </Button>
         </div>
       </nav>
 
@@ -71,14 +80,22 @@ export default function HomePage() {
                 size="lg"
                 className="bg-primary text-primary-foreground hover:bg-primary/90"
               >
-                {t('hero.cta-trial')}
+                {t('hero.cta-resume')}
               </Button>
               <Button
                 size="lg"
                 variant="outline"
                 className="border-primary text-primary hover:bg-primary/10"
               >
-                {t('hero.cta-demo')}
+                {t('hero.cta-projects')}
+              </Button>
+              <Button
+                size="lg"
+                variant="ghost"
+                className="text-primary hover:bg-primary/10"
+                onClick={() => openModal('contactDialog')}
+              >
+                {t('hero.cta-contact')}
               </Button>
             </div>
           </div>
@@ -89,16 +106,31 @@ export default function HomePage() {
                 <div className="bg-card p-6 rounded-lg shadow-lg w-full max-w-sm">
                   <div className="flex justify-between items-center mb-4">
                     <span className="text-lg font-semibold">
-                      {t('hero.ai-assistant')}
+                      {t('hero.code-snippet')}
                     </span>
                     <div className="h-3 w-3 rounded-full bg-chart-1"></div>
                   </div>
                   <div className="space-y-3">
                     <div className="bg-secondary p-3 rounded-lg text-sm">
-                      {t('hero.ai-question')}
+                      {t('hero.code-question')}
                     </div>
                     <div className="bg-primary/10 p-3 rounded-lg text-sm">
-                      {t('hero.ai-answer')}
+                      {t('hero.code-answer')}
+                    </div>
+                    <div className="bg-secondary/50 p-3 rounded-lg text-sm font-mono">
+                      <pre className="text-xs overflow-x-auto">
+{`// Example TypeScript code
+type User = {
+  id: string;
+  name: string;
+  email: string;
+};
+
+const fetchUser = async (id: string): Promise<User> => {
+  const response = await fetch(\`/api/users/\${id}\`);
+  return response.json();
+};`}
+                      </pre>
                     </div>
                   </div>
                 </div>
@@ -108,49 +140,49 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Features Section */}
-      <section id="features" className="w-full py-20">
+      {/* UX Design Section */}
+      <section id="ux-design" className="w-full py-20">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              {t('features.title')}
+              {t('ux-design.title')}
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              {t('features.description')}
+              {t('ux-design.description')}
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                title: t('features.model-management.title'),
-                description: t('features.model-management.description'),
-                icon: '🤖',
+                title: t('ux-design.structure.title'),
+                description: t('ux-design.structure.description'),
+                icon: '📝',
               },
               {
-                title: t('features.analytics.title'),
-                description: t('features.analytics.description'),
-                icon: '📊',
+                title: t('ux-design.component.title'),
+                description: t('ux-design.component.description'),
+                icon: '🧩',
               },
               {
-                title: t('features.infrastructure.title'),
-                description: t('features.infrastructure.description'),
-                icon: '☁️',
+                title: t('ux-design.state-management.title'),
+                description: t('ux-design.state-management.description'),
+                icon: '🔄',
               },
               {
-                title: t('features.collaboration.title'),
-                description: t('features.collaboration.description'),
-                icon: '👥',
+                title: t('ux-design.performance.title'),
+                description: t('ux-design.performance.description'),
+                icon: '⚡',
               },
               {
-                title: t('features.api.title'),
-                description: t('features.api.description'),
-                icon: '🔌',
+                title: t('ux-design.accessibility.title'),
+                description: t('ux-design.accessibility.description'),
+                icon: '♿',
               },
               {
-                title: t('features.security.title'),
-                description: t('features.security.description'),
-                icon: '🔒',
+                title: t('ux-design.testing.title'),
+                description: t('ux-design.testing.description'),
+                icon: '🧪',
               },
             ].map((feature, index) => (
               <div
@@ -160,21 +192,29 @@ export default function HomePage() {
                 <div className="text-4xl mb-4">{feature.icon}</div>
                 <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
                 <p className="text-muted-foreground">{feature.description}</p>
+                <div className="mt-4 pt-4 border-t border-border">
+                  <a href="#" className="text-primary hover:underline text-sm flex items-center">
+                    <span>View example</span>
+                    <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                  </a>
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <section id="benefits" className="w-full py-20 bg-secondary/20">
+      {/* Tech Stack Section */}
+      <section id="tech-stack" className="w-full py-20 bg-secondary/20">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              {t('benefits.title')}
+              {t('tech-stack.title')}
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              {t('benefits.description')}
+              {t('tech-stack.description')}
             </p>
           </div>
 
@@ -183,39 +223,36 @@ export default function HomePage() {
               <div className="space-y-8">
                 {[
                   {
-                    title: t('benefits.productivity.title'),
-                    description: t('benefits.productivity.description'),
+                    title: t('tech-stack.frontend.title'),
+                    description: t('tech-stack.frontend.description'),
+                    icon: '🌐',
                   },
                   {
-                    title: t('benefits.costs.title'),
-                    description: t('benefits.costs.description'),
+                    title: t('tech-stack.typescript.title'),
+                    description: t('tech-stack.typescript.description'),
+                    icon: '📘',
                   },
                   {
-                    title: t('benefits.time-to-market.title'),
-                    description: t('benefits.time-to-market.description'),
+                    title: t('tech-stack.react.title'),
+                    description: t('tech-stack.react.description'),
+                    icon: '⚛️',
                   },
-                ].map((benefit, index) => (
+                  {
+                    title: t('tech-stack.nextjs.title'),
+                    description: t('tech-stack.nextjs.description'),
+                    icon: '▲',
+                  },
+                ].map((tech, index) => (
                   <div key={index} className="flex">
-                    <div className="mr-4 mt-1 bg-primary/10 rounded-full p-1">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="h-5 w-5 text-primary"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
+                    <div className="mr-4 mt-1 bg-primary/10 rounded-full p-1 h-8 w-8 flex items-center justify-center">
+                      <span className="text-lg">{tech.icon}</span>
                     </div>
                     <div>
                       <h3 className="text-xl font-semibold mb-2">
-                        {benefit.title}
+                        {tech.title}
                       </h3>
                       <p className="text-muted-foreground">
-                        {benefit.description}
+                        {tech.description}
                       </p>
                     </div>
                   </div>
@@ -229,14 +266,14 @@ export default function HomePage() {
                   <div className="bg-card p-6 rounded-lg shadow-lg w-full max-w-sm">
                     <div className="flex items-center mb-6">
                       <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4">
-                        <span className="text-2xl">📈</span>
+                        <span className="text-2xl">💻</span>
                       </div>
                       <div>
                         <h4 className="font-semibold">
-                          {t('benefits.metrics.title')}
+                          {t('tech-stack.skills.title')}
                         </h4>
                         <p className="text-sm text-muted-foreground">
-                          {t('benefits.metrics.subtitle')}
+                          {t('tech-stack.skills.subtitle')}
                         </p>
                       </div>
                     </div>
@@ -244,42 +281,42 @@ export default function HomePage() {
                       <div className="space-y-2">
                         <div className="flex justify-between">
                           <span className="text-sm">
-                            {t('benefits.metrics.accuracy')}
+                            {t('tech-stack.skills.typescript')}
                           </span>
-                          <span className="text-sm font-medium">98%</span>
+                          <span className="text-sm font-medium">95%</span>
                         </div>
                         <div className="w-full bg-secondary rounded-full h-2">
                           <div
                             className="bg-chart-1 h-2 rounded-full"
-                            style={{ width: '98%' }}
+                            style={{ width: '95%' }}
                           ></div>
                         </div>
                       </div>
                       <div className="space-y-2">
                         <div className="flex justify-between">
                           <span className="text-sm">
-                            {t('benefits.metrics.response-time')}
+                            {t('tech-stack.skills.react')}
                           </span>
-                          <span className="text-sm font-medium">120ms</span>
+                          <span className="text-sm font-medium">90%</span>
                         </div>
                         <div className="w-full bg-secondary rounded-full h-2">
                           <div
                             className="bg-chart-3 h-2 rounded-full"
-                            style={{ width: '85%' }}
+                            style={{ width: '90%' }}
                           ></div>
                         </div>
                       </div>
                       <div className="space-y-2">
                         <div className="flex justify-between">
                           <span className="text-sm">
-                            {t('benefits.metrics.uptime')}
+                            {t('tech-stack.skills.nextjs')}
                           </span>
-                          <span className="text-sm font-medium">99.9%</span>
+                          <span className="text-sm font-medium">85%</span>
                         </div>
                         <div className="w-full bg-secondary rounded-full h-2">
                           <div
                             className="bg-chart-4 h-2 rounded-full"
-                            style={{ width: '99.9%' }}
+                            style={{ width: '85%' }}
                           ></div>
                         </div>
                       </div>
@@ -335,44 +372,44 @@ export default function HomePage() {
 
           <div className="bg-card rounded-lg p-6 shadow-sm">
             <Accordion>
-              <AccordionItem title={t('faq.q1') || '어떤 개발자인가요?'}>
+              <AccordionItem title={t('faq.q1') || 'What is NEXCA?'}>
                 <p>
                   {t('faq.a1') ||
-                    '구조화, 공통화, 표준화, 자동화가 만든 여유 덕분에 많은 문제를 해결했고, 이 가치를 모든 사용자에게 전하고 싶은 프론트엔드 개발자입니다.'}
+                    'NEXCA is an AI model management platform that helps teams build, deploy, and monitor AI models at scale. Our platform provides tools for model training, deployment, monitoring, and collaboration.'}
                 </p>
               </AccordionItem>
 
-              <AccordionItem title={t('faq.q2') || '어떤 경험이 있나요?'}>
+              <AccordionItem title={t('faq.q2') || 'How does pricing work?'}>
                 <p>
                   {t('faq.a2') ||
-                    '물류 및 스포츠 도메인의 업무 전산화/자동화 스타트업에서 일했습니다. ERP를 비롯한 WMS(창고)/OMS(주문) 앱을 운영하며, 관행적이고 불분명한 업무를 직접 발굴해 전산화했습니다.'}
+                    'We offer flexible pricing plans based on your needs. Our starter plan is free and includes basic features. For more advanced features, we offer premium plans starting at $99/month. Contact us for enterprise pricing.'}
                 </p>
               </AccordionItem>
 
               <AccordionItem
-                title={t('faq.q3') || '팀 협업에 대한 경험은 어떤가요?'}
+                title={t('faq.q3') || 'Do you offer a free trial?'}
               >
                 <p>
                   {t('faq.a3') ||
-                    '고객의 업무를 효율화한 앱처럼, 팀의 업무를 효율화하는 시스템을 만들었습니다. 이슈/버그 트래커, 용어집을 만들어 커뮤니케이션 비용을 줄였습니다.'}
+                    'Yes, we offer a 14-day free trial of our premium features. No credit card required. You can sign up and start using our platform right away.'}
                 </p>
               </AccordionItem>
 
               <AccordionItem
-                title={t('faq.q4') || '주요 기술 스택은 무엇인가요?'}
+                title={t('faq.q4') || 'How secure is your platform?'}
               >
                 <p>
                   {t('faq.a4') ||
-                    'TypeScript, Next.js, React.js를 주로 사용하며, 상태 관리를 위해 Zustand, React Query, Context API 등을 활용합니다. 스타일링은 Tailwind CSS, SCSS, CSS Module을 상황에 맞게 사용합니다.'}
+                    'Security is our top priority. We use industry-standard encryption, regular security audits, and follow best practices for data protection. Your data is always encrypted both in transit and at rest.'}
                 </p>
               </AccordionItem>
 
               <AccordionItem
-                title={t('faq.q5') || '현재 어떤 일을 하고 있나요?'}
+                title={t('faq.q5') || 'Can I integrate with my existing tools?'}
               >
                 <p>
                   {t('faq.a5') ||
-                    '현재는 B2B SaaS 창업 팀에서 MVP를 맡아 요구사항의 빠른 구현을 위한 상태관리 구조 리팩토링을 진행 중입니다. 고객이 당연하게 기대하는 경험부터 감동하는 경험까지 제약 없이 그려내기 위해 계속해서 도전하고 있습니다.'}
+                    'Yes, our platform offers robust API and integration options. You can connect with popular tools like GitHub, Slack, Jira, and more. We also provide webhooks for custom integrations.'}
                 </p>
               </AccordionItem>
             </Accordion>
@@ -413,7 +450,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
             <div>
-              <h3 className="text-lg font-semibold mb-4">석지인</h3>
+              <h3 className="text-lg font-semibold mb-4">NEXCA</h3>
               <p className="text-muted-foreground">{t('footer.description')}</p>
             </div>
             <div>
