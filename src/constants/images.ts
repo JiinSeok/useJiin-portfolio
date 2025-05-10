@@ -1,5 +1,27 @@
-//@TODO 이미지 인덱스 타입
-export const NEXCA_LOGO = {
-  src: '/images/nexca/nexca_icon.png',
-  alt: 'NEXCA 아이콘',
-}
+/**
+ * Image constants for the portfolio site
+ */
+
+// Define a type for image objects
+export type ImageObject = {
+  src: string;
+  alt: string;
+};
+
+// Portfolio logo
+export const PORTFOLIO_LOGO: ImageObject = {
+  src: '/images/portfolio/logo.png',
+  alt: 'Jiin Seok Portfolio Logo',
+};
+
+// Social media icons
+export const SOCIAL_ICONS = {
+  GITHUB: {
+    src: '/images/social/github.svg',
+    alt: 'GitHub Profile',
+  },
+  LINKEDIN: {
+    src: '/images/social/linkedin.svg',
+    alt: 'LinkedIn Profile',
+  },
+} as const;
