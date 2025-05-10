@@ -1,13 +1,13 @@
-import Link from "next/link";
-import { formatDate, getBlogPosts } from "app/lib/posts";
+import { formatDate, getBlogPosts } from '@/lib/posts'
+import Link from 'next/link'
 
 export const metadata = {
-  title: "Blog",
-  description: "Nextfolio Blog",
-};
+  title: 'Blog',
+  description: 'Jiin Blog',
+}
 
 export default function BlogPosts() {
-  let allBlogs = getBlogPosts();
+  let allBlogs = getBlogPosts()
 
   return (
     <section>
@@ -19,9 +19,9 @@ export default function BlogPosts() {
               new Date(a.metadata.publishedAt) >
               new Date(b.metadata.publishedAt)
             ) {
-              return -1;
+              return -1
             }
-            return 1;
+            return 1
           })
           .map((post) => (
             <Link
@@ -41,5 +41,5 @@ export default function BlogPosts() {
           ))}
       </div>
     </section>
-  );
+  )
 }
