@@ -12,7 +12,6 @@ const nextConfig = {
       { protocol: 'https', hostname: 'avatars.githubusercontent.com' },
     ],
   },
-  outputFileTracingRoot: path.join(__dirname),
 }
 
 module.exports = withNextIntl(nextConfig)
