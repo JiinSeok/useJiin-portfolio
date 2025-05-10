@@ -1,12 +1,12 @@
-import { metaData } from "./config";
+import { metaData } from './config'
 
 export default function robots() {
   return {
     rules: [
       {
-        userAgent: "*",
+        userAgent: '*',
       },
     ],
     sitemap: `${metaData.baseUrl}/sitemap.xml`,
-  };
+  }
 }
