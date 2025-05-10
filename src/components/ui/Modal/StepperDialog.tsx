@@ -17,10 +17,7 @@ import { FieldValues } from 'react-hook-form'
  * 2. 문의 내용 (제목, 유형, 메시지)
  * 3. 확인 및 제출
  */
-export default function StepperDialog({
-  isOpen,
-  onRequestCloseAction,
-}: ModalProps) {
+export default function StepperDialog({ isOpen, onRequestClose }: ModalProps) {
   // 번역 훅 사용
   const t = useTranslations('StepperDialog')
 
@@ -36,17 +33,13 @@ export default function StepperDialog({
   const handleFinalSubmit = (): void => {
     // 여기서 백엔드로 데이터를 전송합니다
     console.log('최종 폼 데이터:', formData)
-    onRequestCloseAction()
+    onRequestClose()
   }
 
   return (
-    <Modal
-      isOpen={isOpen}
-      className={'w-max'}
-      onRequestCloseAction={onRequestCloseAction}
-    >
+    <Modal isOpen={isOpen} className={'w-max'} onRequestClose={onRequestClose}>
       {/* 닫기 버튼 */}
-      <Modal.CloseButton onClick={onRequestCloseAction} />
+      <Modal.CloseButton onClick={onRequestClose} />
 
       <Modal.Body className={'w-full'}>
         {/* 제목 */}

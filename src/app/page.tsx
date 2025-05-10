@@ -18,7 +18,7 @@ export default function HomePage() {
       {/* Contact Dialog */}
       <StepperDialog
         isOpen={modalName === 'contactDialog'}
-        onRequestCloseAction={closeModal}
+        onRequestClose={closeModal}
       />
 
       {/* Navigation */}
@@ -119,7 +119,7 @@ export default function HomePage() {
                     </div>
                     <div className="bg-secondary/50 p-3 rounded-lg text-sm font-mono">
                       <pre className="text-xs overflow-x-auto">
-{`// Example TypeScript code
+                        {`// Example TypeScript code
 type User = {
   id: string;
   name: string;
@@ -129,7 +129,7 @@ type User = {
 const fetchUser = async (id: string): Promise<User> => {
   const response = await fetch(\`/api/users/\${id}\`);
   return response.json();
-};`}
+}`}
                       </pre>
                     </div>
                   </div>
@@ -193,10 +193,24 @@ const fetchUser = async (id: string): Promise<User> => {
                 <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
                 <p className="text-muted-foreground">{feature.description}</p>
                 <div className="mt-4 pt-4 border-t border-border">
-                  <a href="#" className="text-primary hover:underline text-sm flex items-center">
+                  <a
+                    href="#"
+                    className="text-primary hover:underline text-sm flex items-center"
+                  >
                     <span>View example</span>
-                    <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    <svg
+                      className="w-4 h-4 ml-1"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M14 5l7 7m0 0l-7 7m7-7H3"
+                      />
                     </svg>
                   </a>
                 </div>
@@ -455,7 +469,7 @@ const fetchUser = async (id: string): Promise<User> => {
             </div>
             <div>
               <h3 className="text-lg font-semibold mb-4">
-                {t('footer.product')}
+                {/*{t('footer.product')}*/}
               </h3>
               <ul className="space-y-2">
                 <li>
@@ -463,7 +477,7 @@ const fetchUser = async (id: string): Promise<User> => {
                     href="#"
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
-                    {t('footer.features')}
+                    {/*{t('footer.features')}*/}
                   </Link>
                 </li>
                 <li>
@@ -471,7 +485,7 @@ const fetchUser = async (id: string): Promise<User> => {
                     href="#"
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
-                    {t('footer.pricing')}
+                    {/*{t('footer.pricing')}*/}
                   </Link>
                 </li>
                 <li>
@@ -479,7 +493,7 @@ const fetchUser = async (id: string): Promise<User> => {
                     href="#"
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
-                    {t('footer.documentation')}
+                    {/*{t('footer.documentation')}*/}
                   </Link>
                 </li>
                 <li>
@@ -487,14 +501,14 @@ const fetchUser = async (id: string): Promise<User> => {
                     href="#"
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
-                    {t('footer.api')}
+                    {/*{t('footer.api')}*/}
                   </Link>
                 </li>
               </ul>
             </div>
             <div>
               <h3 className="text-lg font-semibold mb-4">
-                {t('footer.company')}
+                {/*{t('footer.company')}*/}
               </h3>
               <ul className="space-y-2">
                 <li>
@@ -502,7 +516,7 @@ const fetchUser = async (id: string): Promise<User> => {
                     href="#"
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
-                    {t('footer.about')}
+                    {/*{t('footer.about')}*/}
                   </Link>
                 </li>
                 <li>
@@ -510,7 +524,7 @@ const fetchUser = async (id: string): Promise<User> => {
                     href="#"
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
-                    {t('footer.blog')}
+                    {/*{t('footer.blog')}*/}
                   </Link>
                 </li>
                 <li>
@@ -518,7 +532,7 @@ const fetchUser = async (id: string): Promise<User> => {
                     href="#"
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
-                    {t('footer.careers')}
+                    {/*{t('footer.careers')}*/}
                   </Link>
                 </li>
                 <li>
@@ -565,14 +579,14 @@ const fetchUser = async (id: string): Promise<User> => {
           </div>
           <div className="pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center">
             <p className="text-muted-foreground text-sm">
-              {t('footer.copyright', { year: new Date().getFullYear() })}
+              {/*{t('footer.copyright', { year: new Date().getFullYear() })}*/}
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <Link
                 href="#"
                 className="text-muted-foreground hover:text-primary transition-colors"
               >
-                <span className="sr-only">{t('footer.social.twitter')}</span>
+                {/*<span className="sr-only">{t('footer.social.twitter')}</span>*/}
                 <svg
                   className="h-6 w-6"
                   fill="currentColor"

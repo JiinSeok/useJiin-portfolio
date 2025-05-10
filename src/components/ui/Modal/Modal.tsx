@@ -19,7 +19,7 @@ import ReactModal from 'react-modal'
 export interface ModalProps {
   isOpen: boolean
   onAfterOpen?: () => void
-  onRequestCloseAction: () => void
+  onRequestClose: () => void
   children?: ReactNode
   className?: string
 }
@@ -27,7 +27,7 @@ export interface ModalProps {
 export default function Modal({
   isOpen,
   onAfterOpen,
-  onRequestCloseAction,
+  onRequestClose,
   children,
   className,
 }: ModalProps) {
@@ -44,7 +44,7 @@ export default function Modal({
     <ReactModal
       isOpen={isOpen}
       onAfterOpen={onAfterOpen}
-      onRequestClose={onRequestCloseAction || closeModal}
+      onRequestClose={onRequestClose || closeModal}
       ariaHideApp={false}
       // 모달 오버레이 스타일 - 반투명 검은 배경
       overlayClassName="fixed inset-0 flex items-center justify-center z-50 "

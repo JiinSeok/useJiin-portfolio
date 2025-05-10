@@ -13,10 +13,7 @@ import Modal, { ModalProps } from '@/components/ui/Modal/Modal'
 import { cn } from '@/lib/utils/classnames'
 import { FieldValues } from 'react-hook-form'
 
-export default function FormModal({
-  isOpen,
-  onRequestCloseAction,
-}: ModalProps) {
+export default function FormModal({ isOpen, onRequestClose }: ModalProps) {
   /**
    * 폼 제출 핸들러
    *
@@ -25,13 +22,13 @@ export default function FormModal({
    */
   const handleSubmit = async (data: FieldValues): Promise<void> => {
     console.log(data)
-    onRequestCloseAction()
+    onRequestClose()
   }
 
   return (
-    <Modal isOpen={isOpen} onRequestCloseAction={onRequestCloseAction}>
+    <Modal isOpen={isOpen} onRequestClose={onRequestClose}>
       {/* 닫기 버튼 */}
-      <Modal.CloseButton onClick={onRequestCloseAction} />
+      <Modal.CloseButton onClick={onRequestClose} />
 
       {/* 아이콘 영역 */}
       <Modal.Icon>
@@ -99,7 +96,7 @@ export default function FormModal({
             type="button"
             variant="outline"
             size="lg"
-            onClick={onRequestCloseAction}
+            onClick={onRequestClose}
           >
             취소
           </Button>
