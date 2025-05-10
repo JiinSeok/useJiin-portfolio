@@ -1,0 +1,74 @@
+---
+title: '알바폼 - 폼으로 만나는 알바 구인구직 플랫폼'
+publishedAt: '2024-11-14'
+summary: '알바폼은 간편한 폼 작성으로 알바 구인구직을 연결하는 플랫폼입니다. SEO 최적화, 권한 관리, 사용자 친화적 UI를 갖춘 토이 프로젝트입니다.'
+tags: 'Project, Frontend, TypeScript, Next.js, SEO'
+---
+
+## 프로젝트 개요
+
+- **분류**: 토이 프로젝트
+- **기간**: 2024년 9월 24일 → 2024년 11월 14일 (2개월)
+- **구성**: 프론트엔드 5인
+- **역할**: 프론트엔드 개발, 프로젝트 리딩, 컨벤션･프로젝트･GitHub･자동배포 설정
+- **기술 스택**: TypeScript, Next.js, React Query, Zustand, React Hook Form, Tailwind CSS
+
+## 주요 기여
+
+- **기능 구현**: 로그인 및 권한 관리, 관련 UI 및 렌더링, 공통 Form 컴포넌트
+- **문제 해결**: 구인공고 SEO를 위해 서버/클라이언트 사이드 각각 전역 설정
+- **개발 협업**: 조립형 Form 컴포넌트 내부에 React Hook Form 적용, 공통 디버깅 에러 핸들러, Linear History로 원격 저장소 보호
+
+## 핵심 기능: 검색엔진 최적화 (SEO)
+
+- 사용자가 작성한 공고가 빠르게 검색엔진에 노출될 수 있도록 SSR(Server-Side Rendering)을 활용했습니다.
+- 상태 관리 방식을 React Query에서 Zustand로 교체하여 SSR과 SEO 성능을 동시에 확보했습니다.
+
+<Image
+  src="/notion-images/albaform/seo.png"
+  alt="SEO 최적화 결과"
+  width={800}
+  height={600}
+/>
+
+## 주요 페이지
+
+### 알바 목록 페이지
+
+<Image
+  src="/notion-images/albaform/job-list.png"
+  alt="알바 목록 페이지"
+  width={800}
+  height={600}
+/>
+
+### 로그인 페이지
+
+<Image
+  src="/notion-images/albaform/login.png"
+  alt="로그인 페이지"
+  width={800}
+  height={600}
+/>
+
+### 알바폼 만들기 페이지
+
+<Image
+  src="/notion-images/albaform/create-form.png"
+  alt="알바폼 만들기 페이지"
+  width={800}
+  height={600}
+/>
+
+## 디자인 패턴 및 아키텍처
+
+- **Compound Component Pattern**: 복잡한 UI 컴포넌트를 모듈화하여 재사용성 향상
+- **HOC (withAuth)**: 권한 관리를 위한 고차 컴포넌트 패턴 적용
+- **Feature-Sliced Design**: 기능 중심의 아키텍처로 코드 구조화 (부분 적용)
+
+## 프로젝트 성과
+
+- 사용자 경험을 고려한 직관적인 UI/UX 설계
+- SEO 최적화를 통한 검색엔진 노출 향상
+- 효율적인 상태 관리 및 렌더링 최적화
+- 재사용 가능한 컴포넌트 설계로 개발 생산성 향상

@@ -17,16 +17,19 @@ export default function FooterSection() {
   return (
     <footer className="w-full py-12 bg-card">
       <div className="max-w-7xl mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+        {/* Mobile layout - 2 columns for better Korean text display */}
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-6 mb-8">
           {/* About */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Jiin Seok</h3>
-            <p className="text-muted-foreground">{t('footer.description')}</p>
+          <div className="col-span-2 sm:col-span-2 md:col-span-1 mb-4 md:mb-0">
+            <h3 className="text-lg font-semibold mb-3">Jiin Seok</h3>
+            <p className="text-muted-foreground text-sm leading-relaxed break-keep">
+              {t('footer.description')}
+            </p>
           </div>
 
           {/* Sections */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">
+          <div className="mb-4 md:mb-0">
+            <h3 className="text-lg font-semibold mb-3">
               {t('footer.sections')}
             </h3>
             <ul className="space-y-2">
@@ -34,7 +37,7 @@ export default function FooterSection() {
                 <li key={item.id}>
                   <Link
                     href={item.path}
-                    className="text-muted-foreground hover:text-primary transition-colors"
+                    className="text-muted-foreground hover:text-primary transition-colors text-sm block py-1"
                   >
                     {t(`footer.${item.id}`)}
                   </Link>
@@ -44,8 +47,8 @@ export default function FooterSection() {
           </div>
 
           {/* Resources */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">
+          <div className="mb-4 md:mb-0">
+            <h3 className="text-lg font-semibold mb-3">
               {t('footer.resources')}
             </h3>
             <ul className="space-y-2">
@@ -53,7 +56,7 @@ export default function FooterSection() {
                 <li key={item.id}>
                   <Link
                     href={item.path}
-                    className="text-muted-foreground hover:text-primary transition-colors"
+                    className="text-muted-foreground hover:text-primary transition-colors text-sm block py-1"
                   >
                     {t(`footer.${item.id}`)}
                   </Link>
@@ -63,8 +66,8 @@ export default function FooterSection() {
           </div>
 
           {/* Connect */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">
+          <div className="mb-4 md:mb-0">
+            <h3 className="text-lg font-semibold mb-3">
               {t('footer.connect')}
             </h3>
             <ul className="space-y-2">
@@ -72,7 +75,7 @@ export default function FooterSection() {
                 <li key={item.id}>
                   <Link
                     href={item.path}
-                    className="text-muted-foreground hover:text-primary transition-colors"
+                    className="text-muted-foreground hover:text-primary transition-colors text-sm block py-1"
                   >
                     {t(`footer.${item.id}`)}
                   </Link>
@@ -83,11 +86,11 @@ export default function FooterSection() {
         </div>
 
         {/* Copyright and Social Links */}
-        <div className="pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center">
-          <p className="text-muted-foreground text-sm">
+        <div className="pt-6 border-t border-border flex flex-col md:flex-row justify-between items-center">
+          <p className="text-muted-foreground text-sm text-center md:text-left break-keep mb-4 md:mb-0">
             {t('footer.copyright', { year: currentYear })}
           </p>
-          <div className="flex space-x-6 mt-4 md:mt-0">
+          <div className="flex space-x-6">
             {SOCIAL_LINKS.map((social) => (
               <Link
                 key={social.id}
