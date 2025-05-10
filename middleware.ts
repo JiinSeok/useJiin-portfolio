@@ -1,5 +1,9 @@
 import createMiddleware from 'next-intl/middleware';
 
+/**
+ * Internationalization middleware configuration
+ * Handles locale detection and routing for the application
+ */
 export default createMiddleware({
   // A list of all locales that are supported
   locales: ['en', 'ko'],
