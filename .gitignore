@@ -80,4 +80,5 @@ build/
 # ============================
 *.local.*
 .fleet
-
+notion
+notion/**.*
