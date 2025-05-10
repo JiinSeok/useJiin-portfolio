@@ -102,10 +102,23 @@
       "linkedin": "LinkedIn",
       "github-profile": "GitHub Profile",
       "copyright": "© {year} Jiin Seok. All rights reserved.",
+      "legal": "Legal",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "cookies": "Cookie Policy",
+      "product": "Product",
+      "features": "Features",
+      "pricing": "Pricing",
+      "documentation": "Documentation",
+      "api": "API",
+      "company": "Company",
+      "about": "About",
+      "careers": "Careers",
       "social": {
         "github": "GitHub",
         "linkedin": "LinkedIn",
-        "email": "Email"
+        "email": "Email",
+        "twitter": "Twitter"
       }
     },
     "newsletter": {
@@ -127,6 +140,32 @@
       "a4": "Type and Interface are two ways to define types in TypeScript. Interface is good for extensibility and allows declaration merging, while Type allows for more diverse type expressions such as union types and intersection types.",
       "q5": "When and how should you specify types for useState?",
       "a5": "You should explicitly specify types for useState using generics when type inference from the initial value is not sufficient. This is particularly useful for states that include null or undefined, or complex object types."
+    },
+    "cta": {
+      "title": "Work With Me",
+      "description": "If you have any inquiries about project collaboration, recruitment, or anything else, please contact me.",
+      "trial": "View Portfolio",
+      "contact": "Contact Me"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "description": "Common questions about frontend development and my work.",
+      "q1": "What frontend technologies do you specialize in?",
+      "a1": "I specialize in modern frontend technologies including React, TypeScript, Next.js, and various CSS frameworks. I focus on creating responsive, accessible, and performant user interfaces.",
+      "q2": "How do you approach responsive design?",
+      "a2": "I use a mobile-first approach with CSS frameworks like Tailwind CSS. I ensure that interfaces work well on all device sizes by using responsive design principles, flexible layouts, and thorough testing.",
+      "q3": "Do you have experience with state management?",
+      "a3": "Yes, I have extensive experience with various state management solutions including React Context API, Redux, Zustand, and React Query for server state. I choose the appropriate solution based on project requirements.",
+      "q4": "How do you ensure code quality?",
+      "a4": "I maintain code quality through comprehensive testing (unit, integration, and E2E), code reviews, static type checking with TypeScript, linting, and following best practices for performance and accessibility.",
+      "q5": "Can you work with design systems?",
+      "a5": "Yes, I have experience implementing and maintaining design systems. I understand the importance of consistent UI components and can work with designers to translate their vision into reusable code components."
+    },
+    "release": {
+      "title": "Subscribe to My Newsletter",
+      "description": "Get updates on my latest projects, articles, and frontend development insights.",
+      "email-placeholder": "Enter your email address",
+      "subscribe": "Subscribe"
     }
   },
   "ContactPage": {

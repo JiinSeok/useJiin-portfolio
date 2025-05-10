@@ -356,6 +356,8 @@ const fetchUser = async (id: string): Promise<User> => {
             <Button
               size="lg"
               className="bg-primary text-primary-foreground hover:bg-primary/90"
+              as="a"
+              href="#resume"
             >
               {t('cta.trial')}
             </Button>
@@ -363,7 +365,7 @@ const fetchUser = async (id: string): Promise<User> => {
               size="lg"
               variant="outline"
               className="border-primary text-primary hover:bg-primary/10"
-              onClick={() => openModal}
+              onClick={() => openModal('contactDialog')}
             >
               {t('cta.contact')}
             </Button>
@@ -376,84 +378,59 @@ const fetchUser = async (id: string): Promise<User> => {
         <div className="max-w-4xl mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl tablet:text-4xl font-bold mb-4">
-              {t('faq.title') || 'Frequently Asked Questions'}
+              {t('faq.title')}
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              {t('faq.description') ||
-                'Find answers to common questions about our platform.'}
+              {t('faq.description')}
             </p>
           </div>
 
           <div className="bg-card rounded-lg p-6 shadow-sm">
             <Accordion>
-              <AccordionItem title={t('faq.q1') || 'What is NEXCA?'}>
-                <p>
-                  {t('faq.a1') ||
-                    'NEXCA is an AI model management platform that helps teams build, deploy, and monitor AI models at scale. Our platform provides tools for model training, deployment, monitoring, and collaboration.'}
-                </p>
+              <AccordionItem title={t('faq.q1')}>
+                <p>{t('faq.a1')}</p>
               </AccordionItem>
 
-              <AccordionItem title={t('faq.q2') || 'How does pricing work?'}>
-                <p>
-                  {t('faq.a2') ||
-                    'We offer flexible pricing plans based on your needs. Our starter plan is free and includes basic features. For more advanced features, we offer premium plans starting at $99/month. Contact us for enterprise pricing.'}
-                </p>
+              <AccordionItem title={t('faq.q2')}>
+                <p>{t('faq.a2')}</p>
               </AccordionItem>
 
-              <AccordionItem
-                title={t('faq.q3') || 'Do you offer a free trial?'}
-              >
-                <p>
-                  {t('faq.a3') ||
-                    'Yes, we offer a 14-day free trial of our premium features. No credit card required. You can sign up and start using our platform right away.'}
-                </p>
+              <AccordionItem title={t('faq.q3')}>
+                <p>{t('faq.a3')}</p>
               </AccordionItem>
 
-              <AccordionItem
-                title={t('faq.q4') || 'How secure is your platform?'}
-              >
-                <p>
-                  {t('faq.a4') ||
-                    'Security is our top priority. We use industry-standard encryption, regular security audits, and follow best practices for data protection. Your data is always encrypted both in transit and at rest.'}
-                </p>
+              <AccordionItem title={t('faq.q4')}>
+                <p>{t('faq.a4')}</p>
               </AccordionItem>
 
-              <AccordionItem
-                title={t('faq.q5') || 'Can I integrate with my existing tools?'}
-              >
-                <p>
-                  {t('faq.a5') ||
-                    'Yes, our platform offers robust API and integration options. You can connect with popular tools like GitHub, Slack, Jira, and more. We also provide webhooks for custom integrations.'}
-                </p>
+              <AccordionItem title={t('faq.q5')}>
+                <p>{t('faq.a5')}</p>
               </AccordionItem>
             </Accordion>
           </div>
         </div>
       </section>
 
-      {/* Release Notification Section */}
+      {/* Newsletter Section */}
       <section
-        id="release-notification"
+        id="newsletter"
         className="w-full py-20 bg-gradient-to-b from-background to-secondary/20"
       >
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-3xl tablet:text-4xl font-bold mb-4">
-            {t('release.title') || '출시 소식 받기'}
+            {t('release.title')}
           </h2>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            {t('release.description') ||
-              '새로운 기능과 업데이트 소식을 가장 먼저 받아보세요.'}
+            {t('release.description')}
           </p>
           <div className="flex flex-col mobile:flex-row gap-4 max-w-md mx-auto">
             <Input
               type="email"
-              placeholder={
-                t('release.email-placeholder') || '이메일 주소를 입력하세요'
-              }
+              placeholder={t('release.email-placeholder')}
               className="flex-grow"
             />
             <Button className="bg-primary text-primary-foreground hover:bg-primary/90">
-              {t('release.subscribe') || '구독하기'}
+              {t('release.subscribe')}
             </Button>
           </div>
         </div>
@@ -464,51 +441,51 @@ const fetchUser = async (id: string): Promise<User> => {
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
             <div>
-              <h3 className="text-lg font-semibold mb-4">NEXCA</h3>
+              <h3 className="text-lg font-semibold mb-4">Jiin Seok</h3>
               <p className="text-muted-foreground">{t('footer.description')}</p>
             </div>
             <div>
               <h3 className="text-lg font-semibold mb-4">
-                {/*{t('footer.product')}*/}
+                {t('footer.sections')}
               </h3>
               <ul className="space-y-2">
                 <li>
                   <Link
-                    href="#"
+                    href="#ux-design"
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
-                    {/*{t('footer.features')}*/}
+                    {t('footer.ux-design')}
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="#"
+                    href="#tech-stack"
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
-                    {/*{t('footer.pricing')}*/}
+                    {t('footer.tech-stack')}
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="#"
+                    href="#resume"
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
-                    {/*{t('footer.documentation')}*/}
+                    {t('footer.resume')}
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="#"
+                    href="#til"
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
-                    {/*{t('footer.api')}*/}
+                    {t('footer.til')}
                   </Link>
                 </li>
               </ul>
             </div>
             <div>
               <h3 className="text-lg font-semibold mb-4">
-                {/*{t('footer.company')}*/}
+                {t('footer.resources')}
               </h3>
               <ul className="space-y-2">
                 <li>
@@ -516,7 +493,7 @@ const fetchUser = async (id: string): Promise<User> => {
                     href="#"
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
-                    {/*{t('footer.about')}*/}
+                    {t('footer.github')}
                   </Link>
                 </li>
                 <li>
@@ -524,7 +501,7 @@ const fetchUser = async (id: string): Promise<User> => {
                     href="#"
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
-                    {/*{t('footer.blog')}*/}
+                    {t('footer.blog')}
                   </Link>
                 </li>
                 <li>
@@ -532,12 +509,12 @@ const fetchUser = async (id: string): Promise<User> => {
                     href="#"
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
-                    {/*{t('footer.careers')}*/}
+                    {t('footer.projects')}
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="#"
+                    href="#contact"
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
                     {t('footer.contact')}
@@ -547,15 +524,15 @@ const fetchUser = async (id: string): Promise<User> => {
             </div>
             <div>
               <h3 className="text-lg font-semibold mb-4">
-                {t('footer.legal')}
+                {t('footer.connect')}
               </h3>
               <ul className="space-y-2">
                 <li>
                   <Link
-                    href="#"
+                    href="mailto:seokjiin1073@gmail.com"
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
-                    {t('footer.privacy')}
+                    {t('footer.email')}
                   </Link>
                 </li>
                 <li>
@@ -563,7 +540,7 @@ const fetchUser = async (id: string): Promise<User> => {
                     href="#"
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
-                    {t('footer.terms')}
+                    {t('footer.linkedin')}
                   </Link>
                 </li>
                 <li>
@@ -571,7 +548,7 @@ const fetchUser = async (id: string): Promise<User> => {
                     href="#"
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
-                    {t('footer.cookies')}
+                    {t('footer.github-profile')}
                   </Link>
                 </li>
               </ul>
@@ -579,23 +556,9 @@ const fetchUser = async (id: string): Promise<User> => {
           </div>
           <div className="pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center">
             <p className="text-muted-foreground text-sm">
-              {/*{t('footer.copyright', { year: new Date().getFullYear() })}*/}
+              {t('footer.copyright', { year: new Date().getFullYear() })}
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link
-                href="#"
-                className="text-muted-foreground hover:text-primary transition-colors"
-              >
-                {/*<span className="sr-only">{t('footer.social.twitter')}</span>*/}
-                <svg
-                  className="h-6 w-6"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                  aria-hidden="true"
-                >
-                  <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
-                </svg>
-              </Link>
               <Link
                 href="#"
                 className="text-muted-foreground hover:text-primary transition-colors"
