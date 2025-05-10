@@ -11,6 +11,10 @@ const routing = defineRouting({
     '/register': '/register',
     '/contact': '/contact',
     '#': '#',
+    '#ux-design': '#ux-design',
+    '#tech-stack': '#tech-stack',
+    '#resume': '#resume',
+    '#til': '#til',
   },
 })
 
