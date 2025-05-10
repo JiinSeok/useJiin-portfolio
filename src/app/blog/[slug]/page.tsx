@@ -4,6 +4,12 @@ import { formatDate, getBlogPosts } from '@/lib/posts'
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 
+interface Params {
+  params: {
+    slug: string
+  }
+}
+
 export async function generateStaticParams() {
   const posts = getBlogPosts()
 
@@ -14,7 +20,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({
   params,
-}): Promise<Metadata | undefined> {
+}: Params): Promise<Metadata | undefined> {
   const post = getBlogPosts().find((post) => post.slug === params.slug)
   if (!post) {
     return
@@ -54,7 +60,7 @@ export async function generateMetadata({
   }
 }
 
-export default function Blog({ params }) {
+export default function Blog({ params }: Params) {
   const post = getBlogPosts().find((post) => post.slug === params.slug)
 
   if (!post) {

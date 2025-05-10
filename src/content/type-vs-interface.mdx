@@ -14,24 +14,24 @@ TypeScript에서 `type`과 `interface`는 모두 객체의 형태를 정의하�
 ```typescript
 // Interface - 선언 병합 가능
 interface User {
-  name: string;
+  name: string
 }
 
 interface User {
-  age: number;
+  age: number
 }
 
 // 결과적으로 User는 { name: string; age: number; }
 
 // Type - 중복 선언 시 에러 발생
 type Animal = {
-  name: string;
-};
+  name: string
+}
 
 // Error: Duplicate identifier 'Animal'
 type Animal = {
-  age: number;
-};
+  age: number
+}
 ```
 
 ## 2. `extends`, `&`, `|`
@@ -41,28 +41,28 @@ type Animal = {
 ```typescript
 // Interface - extends 사용
 interface Person {
-  name: string;
+  name: string
 }
 
 interface Employee extends Person {
-  employeeId: number;
+  employeeId: number
 }
 
 // Type - intersection 타입(&) 사용
 type Person = {
-  name: string;
-};
+  name: string
+}
 
 type Employee = Person & {
-  employeeId: number;
-};
+  employeeId: number
+}
 ```
 
 반면, union 타입은 `interface`에서 비슷하게 구현할 수 없습니다.
 
 ```typescript
 // Type - union 타입(|) 사용 가능
-type ID = number | string;
+type ID = number | string
 
 // Interface - union 타입 직접 구현 불가능
 // 아래와 같은 방식으로는 구현할 수 없음
@@ -76,12 +76,12 @@ type ID = number | string;
 `type`은 계산된 프로퍼티를 지원하지만, `interface`는 지원하지 않습니다.
 
 ```typescript
-type Keys = 'firstName' | 'lastName';
+type Keys = 'firstName' | 'lastName'
 
 // Type - 계산된 프로퍼티 지원
 type NameMap = {
-  [K in Keys]: string;
-};
+  [K in Keys]: string
+}
 
 // Interface - 계산된 프로퍼티 미지원
 // interface NameMap {
@@ -95,13 +95,13 @@ type NameMap = {
 
 ```typescript
 // Type - 튜플 표현
-type Point = [number, number];
+type Point = [number, number]
 
 // Interface - 튜플 표현 (더 복잡함)
 interface PointInterface {
-  0: number;
-  1: number;
-  length: 2;
+  0: number
+  1: number
+  length: 2
 }
 ```
 

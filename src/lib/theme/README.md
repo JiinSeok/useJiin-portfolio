@@ -17,16 +17,16 @@ The color palette is defined in `colors.ts`. It includes both light and dark the
 ### Usage
 
 ```tsx
-import { colors } from '@/lib/theme';
+import { colors } from '@/lib/theme'
 
 // Using light theme colors
-const primaryColor = colors.light.primary;
+const primaryColor = colors.light.primary
 
 // Using dark theme colors
-const darkPrimaryColor = colors.dark.primary;
+const darkPrimaryColor = colors.dark.primary
 
 // Using specific color categories
-const chartColor1 = colors.light.chart.color1;
+const chartColor1 = colors.light.chart.color1
 ```
 
 ## Important Notes

@@ -5,7 +5,7 @@ import { useTranslations } from 'next-intl'
 
 /**
  * Tech Stack section component for the homepage
- * 
+ *
  * This component displays the developer's technical skills and expertise,
  * including a visual representation of skill levels.
  */
@@ -69,10 +69,10 @@ export default function TechStackSection() {
                     {TECH_SKILLS.map((skill, index) => (
                       <div key={index} className="space-y-2">
                         <div className="flex justify-between">
-                          <span className="text-sm">
-                            {t(skill.name)}
+                          <span className="text-sm">{t(skill.name)}</span>
+                          <span className="text-sm font-medium">
+                            {skill.percentage}%
                           </span>
-                          <span className="text-sm font-medium">{skill.percentage}%</span>
                         </div>
                         <div className="w-full bg-secondary rounded-full h-2">
                           <div

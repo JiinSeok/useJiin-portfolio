@@ -1,6 +1,6 @@
 /**
  * Message constants for the application
- * 
+ *
  * This file contains various message strings used throughout the application.
  * Messages are organized by their purpose and context.
  */
@@ -10,7 +10,7 @@ export const MSG = {
   SUCCESS: '성공했어요',
   FAIL: '실패했어요',
   UNKNOWN_ERROR: '문제가 발생했어요. 잠시 후 다시 시도해주세요',
-};
+}
 
 // Error messages
 export const ERROR_MESSAGES = {
@@ -23,7 +23,7 @@ export const ERROR_MESSAGES = {
   SAVE: {
     title: '저장 실패',
   },
-};
+}
 
 // Modal messages
 export const MODAL_MESSAGES = {
@@ -46,4 +46,4 @@ export const MODAL_MESSAGES = {
     buttonText: '이어쓰기',
     showSecondButton: false,
   },
-};
+}

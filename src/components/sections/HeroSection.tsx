@@ -6,7 +6,7 @@ import { useTranslations } from 'next-intl'
 
 /**
  * Hero section component for the homepage
- * 
+ *
  * This component displays the main hero section with a title, description,
  * call-to-action buttons, and a code snippet example.
  */

@@ -5,7 +5,7 @@ import { useTranslations } from 'next-intl'
 
 /**
  * FAQ section component for the homepage
- * 
+ *
  * This component displays frequently asked questions in an accordion format.
  */
 export default function FAQSection() {

@@ -6,7 +6,7 @@ import { useTranslations } from 'next-intl'
 
 /**
  * Newsletter section component for the homepage
- * 
+ *
  * This component displays a newsletter subscription form to capture user emails.
  */
 export default function NewsletterSection() {
@@ -31,7 +31,10 @@ export default function NewsletterSection() {
         <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
           {t('release.description')}
         </p>
-        <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+        <form
+          onSubmit={handleSubmit}
+          className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto"
+        >
           <Input
             type="email"
             placeholder={t('release.email-placeholder')}
@@ -39,7 +42,7 @@ export default function NewsletterSection() {
             required
             aria-label={t('release.email-placeholder')}
           />
-          <Button 
+          <Button
             type="submit"
             className="bg-primary text-primary-foreground hover:bg-primary/90"
           >

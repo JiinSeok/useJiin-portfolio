@@ -6,7 +6,7 @@ import { useTranslations } from 'next-intl'
 
 /**
  * Call-to-Action section component for the homepage
- * 
+ *
  * This component displays a prominent call-to-action section with buttons
  * to encourage user engagement.
  */
@@ -27,10 +27,9 @@ export default function CTASection() {
           <Button
             size="lg"
             className="bg-primary text-primary-foreground hover:bg-primary/90"
-            as="a"
-            href="#resume"
+            asChild
           >
-            {t('cta.trial')}
+            <a href="#resume">{t('cta.trial')}</a>
           </Button>
           <Button
             size="lg"

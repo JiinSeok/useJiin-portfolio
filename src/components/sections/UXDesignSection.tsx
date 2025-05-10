@@ -5,7 +5,7 @@ import { useTranslations } from 'next-intl'
 
 /**
  * UX Design section component for the homepage
- * 
+ *
  * This component displays a grid of UX design features and capabilities.
  */
 export default function UXDesignSection() {

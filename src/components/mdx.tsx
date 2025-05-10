@@ -1,40 +1,72 @@
 import { CaptionComponent } from '@/app/caption'
 import { ImageGrid } from '@/components/image-grid'
 import { YouTubeComponent } from '@/components/youtube'
-import { MDXRemote } from 'next-mdx-remote/rsc'
-import Image from 'next/image'
+import { MDXRemote, MDXRemoteProps } from 'next-mdx-remote/rsc'
+import Image, { ImageProps } from 'next/image'
 import Link from 'next/link'
-import React from 'react'
+import React, {
+  AnchorHTMLAttributes,
+  DetailedHTMLProps,
+  ReactNode,
+} from 'react'
 import rehypeKatex from 'rehype-katex'
 import remarkMath from 'remark-math'
 import { highlight } from 'sugar-high'
 import 'katex/dist/katex.min.css'
 
-function CustomLink(props) {
-  const href = props.href
+type CustomLinkProps = DetailedHTMLProps<
+  AnchorHTMLAttributes<HTMLAnchorElement>,
+  HTMLAnchorElement
+> & {
+  href?: string
+  alt?: string
+  children?: ReactNode
+}
+
+function CustomLink({
+  href = '',
+  ...rest
+}: Required<Pick<CustomLinkProps, 'href'>> & Omit<CustomLinkProps, 'href'>) {
   if (href.startsWith('/')) {
     return (
-      <Link href={href} {...props}>
-        {props.children}
+      <Link href={href} {...rest}>
+        {rest.children}
       </Link>
     )
   }
   if (href.startsWith('#')) {
-    return <a {...props} />
+    return (
+      <a href={href} {...rest}>
+        {rest.children}
+      </a>
+    )
   }
-  return <a target="_blank" rel="noopener noreferrer" {...props} />
+  return (
+    <a target="_blank" rel="noopener noreferrer" href={href} {...rest}>
+      {rest.children}
+    </a>
+  )
 }
 
-function RoundedImage(props) {
-  return <Image alt={props.alt} className="rounded-lg" {...props} />
+function RoundedImage(props: ImageProps) {
+  return <Image className="rounded-lg" {...props} />
 }
 
-function Code({ children, ...props }) {
+type CodeProps = React.HTMLAttributes<HTMLElement> & { children: string }
+
+function Code({ children, ...props }: CodeProps) {
   const codeHTML = highlight(children)
   return <code dangerouslySetInnerHTML={{ __html: codeHTML }} {...props} />
 }
 
-function Table({ data }) {
+type TableData = {
+  headers: string[]
+  rows: (string | number | React.ReactNode)[][]
+}
+
+type TableProps = { data: TableData }
+
+function Table({ data }: TableProps) {
   const headers = data.headers.map((header, index) => (
     <th key={index}>{header}</th>
   ))
@@ -55,11 +87,18 @@ function Table({ data }) {
   )
 }
 
-function Strikethrough(props) {
+type StrikethroughProps = React.HTMLAttributes<HTMLElement>
+
+function Strikethrough(props: StrikethroughProps) {
   return <del {...props} />
 }
 
-function Callout(props) {
+type CalloutProps = {
+  emoji: React.ReactNode
+  children: React.ReactNode
+}
+
+function Callout(props: CalloutProps) {
   return (
     <div className="px-4 py-3 bg-[#F7F7F7] dark:bg-[#181818] rounded p-1 text-sm flex items-center text-neutral-900 dark:text-neutral-100 mb-8">
       <div className="flex items-center w-4 mr-4">{props.emoji}</div>
@@ -68,8 +107,8 @@ function Callout(props) {
   )
 }
 
-function slugify(str) {
-  return str
+function slugify(str: string | React.ReactNode): string {
+  return String(str)
     .toString()
     .toLowerCase()
     .trim()
@@ -79,8 +118,12 @@ function slugify(str) {
     .replace(/\-\-+/g, '-')
 }
 
-function createHeading(level) {
-  const Heading = ({ children }) => {
+type HeadingProps = {
+  children: React.ReactNode
+}
+
+function createHeading(level: number): React.FC<HeadingProps> {
+  const Heading: React.FC<HeadingProps> = ({ children }) => {
     const slug = slugify(children)
     return React.createElement(
       `h${level}`,
@@ -117,7 +160,7 @@ const components = {
   Callout,
 }
 
-export function CustomMDX(props) {
+export function CustomMDX(props: MDXRemoteProps) {
   return (
     <MDXRemote
       {...props}

@@ -20,9 +20,7 @@
     },
     "import/resolver": {
       "node": {
-        "paths": [
-          "src"
-        ]
+        "paths": ["src"]
       }
     }
   },
@@ -40,10 +38,7 @@
     },
     "sourceType": "module"
   },
-  "plugins": [
-    "@typescript-eslint",
-    "react"
-  ],
+  "plugins": ["@typescript-eslint", "react"],
   "rules": {
     "import/no-absolute-path": [
       "error",
@@ -57,21 +52,16 @@
   },
   "overrides": [
     {
-      "files": [
-        "src/**/*.{ts,tsx}",
-        "public/**"
-      ],
+      "files": ["src/**/*.{ts,tsx}", "public/**"],
       "rules": {
-        "semi": [
-          "warn",
-          "never"
-        ],
+        "semi": ["warn", "never"],
         "react/jsx-uses-vars": "warn",
         "react/jsx-key": "error",
         "react/prop-types": "off",
         "@typescript-eslint/strict-boolean-expressions": "off",
         "@typescript-eslint/no-explicit-any": "off",
-        "import/no-absolute-path": "off"
+        "import/no-absolute-path": "off",
+        "no-useless-escape": "off"
       }
     }
   ]

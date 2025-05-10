@@ -36,8 +36,13 @@ export default function FooterSection() {
               {FOOTER_MENU_ITEMS.SECTIONS.map((item) => (
                 <li key={item.id}>
                   <Link
-                    href={item.path}
+                    href={
+                      item.path.startsWith('/#')
+                        ? `#${item.path.slice(2)}` // '/#ux' → '#ux'
+                        : item.path
+                    }
                     className="text-muted-foreground hover:text-primary transition-colors text-sm block py-1"
+                    alt=""
                   >
                     {t(`footer.${item.id}`)}
                   </Link>

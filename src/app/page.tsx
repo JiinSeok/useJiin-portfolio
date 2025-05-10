@@ -1,6 +1,5 @@
 'use client'
 
-import LanguageSwitcher from '@/components/LanguageSwitcher'
 import CTASection from '@/components/sections/CTASection'
 import FAQSection from '@/components/sections/FAQSection'
 import FooterSection from '@/components/sections/FooterSection'
@@ -16,7 +15,7 @@ import { useTranslations } from 'next-intl'
 
 /**
  * HomePage component
- * 
+ *
  * This is the main page of the portfolio site. It includes various sections
  * such as hero, UX design, tech stack, FAQ, newsletter, and footer.
  */
@@ -41,7 +40,7 @@ export default function HomePage() {
           {NAVIGATION_ITEMS.map((item) => (
             <Link
               key={item.id}
-              href={`#${item.id}`}
+              href={{ pathname: '/', hash: item.id }}
               className="text-foreground hover:text-primary transition-colors"
             >
               {t(item.translationKey)}
@@ -54,9 +53,7 @@ export default function HomePage() {
             {t('nav.contact')}
           </button>
         </div>
-        <div className="flex items-center space-x-4">
-          <LanguageSwitcher />
-        </div>
+        <div className="flex items-center space-x-4"></div>
       </nav>
 
       {/* Main Content Sections */}
