@@ -1,7 +1,6 @@
-import { CaptionComponent } from '@/app/caption'
+import { CaptionComponent } from '@/components/Caption'
 import { ImageGrid } from '@/components/image-grid'
-import { YouTubeComponent } from '@/components/youtube'
-import { MDXRemote, MDXRemoteProps } from 'next-mdx-remote/rsc'
+import { YouTubeComponent } from '@/components/Youtube'
 import Image, { ImageProps } from 'next/image'
 import Link from 'next/link'
 import React, {
@@ -9,10 +8,7 @@ import React, {
   DetailedHTMLProps,
   ReactNode,
 } from 'react'
-import rehypeKatex from 'rehype-katex'
-import remarkMath from 'remark-math'
 import { highlight } from 'sugar-high'
-import 'katex/dist/katex.min.css'
 
 type CustomLinkProps = DetailedHTMLProps<
   AnchorHTMLAttributes<HTMLAnchorElement>,
@@ -142,7 +138,7 @@ function createHeading(level: number): React.FC<HeadingProps> {
   return Heading
 }
 
-const components = {
+export const components = {
   h1: createHeading(1),
   h2: createHeading(2),
   h3: createHeading(3),
@@ -158,19 +154,4 @@ const components = {
   Table,
   del: Strikethrough,
   Callout,
-}
-
-export function CustomMDX(props: MDXRemoteProps) {
-  return (
-    <MDXRemote
-      {...props}
-      components={{ ...components, ...(props.components || {}) }}
-      options={{
-        mdxOptions: {
-          remarkPlugins: [remarkMath],
-          rehypePlugins: [rehypeKatex],
-        },
-      }}
-    />
-  )
 }

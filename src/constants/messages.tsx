@@ -7,9 +7,9 @@
 
 // General messages
 export const MSG = {
-  SUCCESS: '성공했어요',
-  FAIL: '실패했어요',
-  UNKNOWN_ERROR: '문제가 발생했어요. 잠시 후 다시 시도해주세요',
+  SUCCESS: '성공하였습니다',
+  FAIL: '실패하였습니다',
+  UNKNOWN_ERROR: '문제가 발생하였습니다. 잠시 후 다시 시도해 주세요',
 }
 
 // Error messages
@@ -28,10 +28,10 @@ export const ERROR_MESSAGES = {
 // Modal messages
 export const MODAL_MESSAGES = {
   DELETE: {
-    title: '삭제할까요?',
-    description: '삭제 후 정보를 복구할 수 없어요',
+    title: '삭제하시겠습니까?',
+    description: '삭제 후 정보를 복구할 수 없습니다',
     buttonText: '삭제하기',
-    buttonText2: '다음에 할게요',
+    buttonText2: '다음에 하겠습니다',
     showSecondButton: true,
   },
   DONE: {
@@ -41,8 +41,8 @@ export const MODAL_MESSAGES = {
     showSecondButton: false,
   },
   WRITING: {
-    title: '작성 중인 내용이 있어요!',
-    description: '이어서 작성하시겠어요?',
+    title: '작성 중인 내용이 있습니다!',
+    description: '이어서 작성하시겠습니까?',
     buttonText: '이어쓰기',
     showSecondButton: false,
   },

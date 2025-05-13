@@ -5,23 +5,23 @@ import { Button } from '@/components/ui/Button'
 import { useTranslations } from 'next-intl'
 
 /**
- * Newsletter section component for the homepage
+ * Bug report section component for the homepage
  *
- * This component displays a newsletter subscription form to capture user emails.
+ * This component displays a bug report form to capture user feedback.
  */
-export default function NewsletterSection() {
+export default function BugReportSection() {
   const t = useTranslations('HomePage')
 
   // Handle form submission
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    // Add newsletter subscription logic here
-    console.log('Newsletter subscription submitted')
+    // Add bug report submission logic here
+    console.log('Bug report submitted')
   }
 
   return (
     <section
-      id="newsletter"
+      id="bug-report"
       className="w-full py-20 bg-gradient-to-b from-background to-secondary/20"
     >
       <div className="max-w-4xl mx-auto px-4 text-center">
@@ -36,7 +36,7 @@ export default function NewsletterSection() {
           className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto"
         >
           <Input
-            type="email"
+            type="text"
             placeholder={t('release.email-placeholder')}
             className="flex-grow"
             required

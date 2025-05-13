@@ -16,7 +16,7 @@ export default function CTASection() {
 
   return (
     <section id="contact" className="w-full py-20">
-      <div className="max-w-4xl mx-auto px-4 text-center">
+      <div className="max-w-7xl mx-auto px-3 text-center">
         <h2 className="text-3xl md:text-4xl font-bold mb-6">
           {t('cta.title')}
         </h2>
@@ -35,9 +35,14 @@ export default function CTASection() {
             size="lg"
             variant="outline"
             className="border-primary text-primary hover:bg-primary/10"
-            onClick={() => openModal('contactDialog')}
+            asChild
           >
-            {t('cta.contact')}
+            <a href="#contact" onClick={(e) => {
+              e.preventDefault();
+              openModal('contactDialog');
+            }}>
+              {t('cta.contact')}
+            </a>
           </Button>
         </div>
       </div>

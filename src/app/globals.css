@@ -1,6 +1,9 @@
 @import 'tailwindcss';
 @import 'tw-animate-css';
 
+/* Pretendard Font */
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
 @custom-variant dark (&:is(.dark *));
 
 :root {
@@ -117,5 +120,50 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;  /* Chrome, Safari and Opera */
+  }
+
+  /* Responsive text sizing utilities */
+  .text-responsive-xs {
+    font-size: clamp(12px, 0.8vw, 14px);
+  }
+
+  .text-responsive-sm {
+    font-size: clamp(14px, 0.9vw, 16px);
+  }
+
+  .text-responsive-base {
+    font-size: clamp(16px, 1vw, 18px);
+  }
+
+  .text-responsive-lg {
+    font-size: clamp(18px, 1.2vw, 20px);
+  }
+
+  .text-responsive-xl {
+    font-size: clamp(20px, 1.5vw, 24px);
+  }
+
+  .text-responsive-2xl {
+    font-size: clamp(24px, 2vw, 30px);
+  }
+
+  .text-responsive-3xl {
+    font-size: clamp(30px, 2.5vw, 36px);
+  }
+
+  .text-responsive-4xl {
+    font-size: clamp(36px, 3vw, 48px);
   }
 }

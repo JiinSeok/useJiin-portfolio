@@ -1,28 +1,101 @@
 {
+  "SoftSkillsPage": {
+    "title": "개발자 소프트 스킬",
+    "description": "개발자에게 필요한 소프트 스킬 경험을 모아놓은 컬렉션",
+    "subtitle": "개발자에게 필요한 소프트 스킬 경험을 모아놓은 컬렉션입니다. 의사소통, 팀워크, 문제 해결 및 개발자의 성공을 돕는 기타 비기술적 스킬에 대한 성찰입니다."
+  },
+  "TILPage": {
+    "title": "Today I Learned",
+    "description": "개발자로서의 여정에서 배운 것들을 모아놓은 컬렉션",
+    "subtitle": "개발자로서의 여정에서 배운 것들을 모아놓은 컬렉션입니다. 흥미롭거나 유용하다고 생각한 다양한 주제에 대한 짧은 노트들입니다."
+  },
   "HomePage": {
     "title": "석지인 - 프론트엔드 개발자",
     "description": "구조화, 공통화, 표준화, 자동화가 만든 여유 덕분에 많은 문제를 해결했고, 이 가치를 모든 사용자에게 전하고 싶은 프론트엔드 개발자 석지인입니다.",
     "error": {
-      "unknown": "문제가 발생했어요. 잠시 후 다시 시도해주세요"
+      "unknown": "문제가 발생하였습니다. 잠시 후 다시 시도해 주세요"
+    },
+    "fun-facts": {
+      "title": "재미있는 사실들",
+      "description": "끝까지 스크롤해 주셔서 감사합니다! 저와 이 웹사이트에 대한 재미있는 사실들을 소개합니다.",
+      "items": [
+        "이 포트폴리오는 Next.js 14, TypeScript, Tailwind CSS로 제작되었습니다.",
+        "이 웹사이트를 위해 10,000줄 이상의 코드를 작성했습니다.",
+        "이 사이트의 애니메이션은 CSS 트랜지션과 React 훅을 사용하여 만들어졌습니다.",
+        "저는 기계식 키보드의 열렬한 팬이며 다양한 스위치 타입의 키보드를 여러 개 가지고 있습니다.",
+        "이 웹사이트는 완전히 반응형으로 제작되어 휴대폰부터 울트라와이드 모니터까지 모든 기기에서 작동합니다."
+      ]
     },
     "nav": {
-      "ux-design": "UX를 위한 프론트엔드 설계",
+      "motivation-fit": "직무 적합성",
+      "personal": "나에 대해",
+      "ux-design": "UX 설계",
       "tech-stack": "기술 스택",
+      "site-build": "사이트 제작 과정",
       "resume": "이력서",
       "til": "Today I Learned",
+      "soft-skills": "소프트 스킬",
       "contact": "문의하기"
     },
     "hero": {
       "title": "Pain Point를 위한",
       "title-highlight1": "문제 해결",
       "title-highlight2": "실전형 프론트엔드 개발자",
-      "description": "안녕하세요. 구조화, 공통화, 표준화, 자동화가 만든 여유 덕분에 많은 문제를 해결했고, 이 가치를 모든 사용자에게 전하고 싶은 프론트엔드 개발자 석지인입니다. 고객에게 Pain Point에 알맞은 효율을 선물하도록, 익숙한 수작업보다 어려운 일이 되어버리지는 않도록, 믿을 수 있고 이해할 수 있는 프론트엔드를 위해 함께 노력하고 싶습니다.",
+      "description": "안녕하세요. 구조화, 공통화, 표준화, 자동화가 만든 여유 덕분에\n많은 문제를 해결했고, 이 가치를 모든 사용자에게 전하고 싶은\n프론트엔드 개발자 석지인입니다.\n\n고객에게 Pain Point에 알맞은 효율을 선물하도록,\n익숙한 수작업보다 어려운 일이 되어버리지는 않도록,\n믿을 수 있고 이해할 수 있는 프론트엔드를 위해 함께 노력하고 싶습니다.",
+      "summary": [
+        "구조화, 공통화, 표준화, 자동화를 통한 문제 해결",
+        "사용자 중심의 효율적인 프론트엔드 개발",
+        "이해하기 쉽고 신뢰할 수 있는 UI/UX 구현"
+      ],
       "cta-resume": "이력서 보기",
       "cta-projects": "프로젝트 보기",
       "cta-contact": "문의하기",
+      "view-more": "더 보기",
+      "tab-code": "코드",
+      "tab-seo": "SEO",
+      "tab-demo": "데모",
       "code-snippet": "코드 스니펫",
-      "code-question": "TypeScript와 Next.js로 어떤 문제를 해결했나요?",
-      "code-answer": "타입 안정성과 서버 사이드 렌더링을 통해 사용자 경험과 개발 생산성을 향상시켰습니다."
+      "code-question": "TypeScript와 Next.js로 어떤 문제를 해결하셨습니까?",
+      "code-answer": "타입 안정성과 서버 사이드 렌더링을 통해\n사용자 경험과 개발 생산성을 향상시켰습니다.",
+      "seo-title": "SEO 최적화",
+      "seo-description": "검색 엔진에서 웹사이트가 잘 노출되고\n목표 대상에게 효과적으로 도달할 수 있도록\nSEO 모범 사례를 구현합니다.",
+      "demo-title": "인터랙티브 데모",
+      "demo-description": "부드러운 사용자 경험과 반응형 디자인을 보여주는\n인터랙티브 데모를 확인해 주세요."
+    },
+    "motivation-fit": {
+      "title": "나의 직무 적합성",
+      "subtitle": "제가 잘하는 일과 직업적 여정에서 저를 동기부여하는 것",
+      "strengths-title": "전문적 강점",
+      "strength-1-title": "구조화를 통한 문제 해결",
+      "strength-1-description": "구조화, 표준화, 자동화된 솔루션을 만들어 개발 워크플로우에 효율성을 가져오는 복잡한 문제 해결에 뛰어나고 있습니다.",
+      "strength-2-title": "사용자 중심 개발",
+      "strength-2-description": "사용자의 Pain Point를 사용성과 접근성을 우선시하는 직관적인 인터페이스로 변환하는 데 능숙하게 대응하고 있습니다.",
+      "strength-3-title": "기술적 커뮤니케이션",
+      "strength-3-description": "기술적 개념을 기술 및 비기술 이해관계자 모두에게 효과적으로 전달하여 개발과 비즈니스 요구 사항 간의 격차를 해소할 수 있습니다.",
+      "motivations-title": "나를 움직이는 원동력",
+      "motivation-1-title": "의미 있는 영향력 창출",
+      "motivation-1-description": "제 작업이 사용자 경험을 직접 개선하고 사람들의 실제 문제를 해결하는 것을 볼 때 동기부여를 받고 있습니다.",
+      "motivation-2-title": "지속적인 학습",
+      "motivation-2-description": "프론트엔드 개발의 최전선에 머물기 위해 새로운 기술과 접근 방식을 배우도록 도전하는 환경에서 성장하고 있습니다.",
+      "motivation-3-title": "협업을 통한 혁신",
+      "motivation-3-description": "개인적으로는 불가능한 혁신적인 솔루션을 만들기 위해 다양한 팀과 협력하는 데서 성취감을 느끼고 있습니다.",
+      "conclusion-title": "이것이 중요한 이유",
+      "conclusion-description": "제 기술적 능력과 내재적 동기부여의 조합은 사용자 경험과 개발자 효율성을 모두 중시하는 기업에 지속 가능한 가치를 창출할 수 있게 합니다."
+    },
+    "personal": {
+      "title": "나에 대해",
+      "subtitle": "전문적으로, 그리고 개인적으로 저를 더 잘 알아보십시오",
+      "about-title": "저는 이런 사람입니다",
+      "about-description": "저는 석지인, 문제를 발견하고 이를 깔끔하고 마법 같은 솔루션으로 엮어내는 능력을 가진 프론트엔드 개발자입니다. 이전에는 QA 엔지니어로 일했으며, 여전히 원활한 사용자 경험에 집중하고 있습니다. 기술적 능력과 사용자 요구에 대한 깊은 이해를 결합하여 모든 프로젝트에 독특한 관점을 제공합니다.",
+      "interests-title": "관심사",
+      "interest-1": "JetBrains 도구 - WebStorm 및 다른 JetBrains 제품을 선호합니다",
+      "interest-2": "기계식 키보드 - 택타일 스위치와 훌륭한 플러그인을 선호합니다",
+      "interest-3": "프론트엔드 기술 - TypeScript, React, Next.js 등을 항상 탐구하고 있습니다",
+      "values-title": "가치관",
+      "value-1": "클린 코드 - 기능적이면서도 우아한 솔루션을 만드는 것을 지향합니다",
+      "value-2": "사용자 경험 - 원활하고 직관적인 인터페이스 만들기에 집중하고 있습니다",
+      "value-3": "지속적인 학습 - HTTP와 접근성과 같은 새로운 개념을 항상 탐구하고 있습니다",
+      "quote": "함께 깔끔하고 마법 같은 경험을 만들어 나가길 기대하고 있습니다!"
     },
     "ux-design": {
       "title": "UX를 위한 프론트엔드 설계",
@@ -76,7 +149,65 @@
         "subtitle": "기술 숙련도",
         "typescript": "TypeScript",
         "react": "React",
-        "nextjs": "Next.js"
+        "nextjs": "Next.js",
+        "javascript": "JavaScript (ES6+)",
+        "html-css": "HTML5 & CSS3",
+        "tailwind": "Tailwind CSS",
+        "styled-components": "Styled-Components",
+        "sass": "Sass (SCSS)",
+        "css-module": "CSS Module",
+        "react-query": "Tanstack React Query",
+        "context-api": "Context API",
+        "zustand": "Zustand",
+        "react-hook-form": "React Hook Form",
+        "axios": "Axios",
+        "git": "Git",
+        "github": "GitHub",
+        "eslint-prettier": "ESLint & Prettier",
+        "husky": "Husky",
+        "figma": "Figma",
+        "vercel": "Vercel",
+        "netlify": "Netlify",
+        "aws": "AWS",
+        "docker": "Docker",
+        "mongodb": "MongoDB & Mongoose",
+        "mysql": "MySQL",
+        "postgresql": "PostgreSQL",
+        "oracle": "Oracle",
+        "python": "Python",
+        "jira": "Jira",
+        "asana": "Asana",
+        "confluence-notion": "Confluence & Notion",
+        "google-analytics": "Google Analytics",
+        "kakao-developers": "Kakao Developers",
+        "swagger": "Swagger",
+        "postman": "Postman",
+        "npm": "NPM",
+        "yarn-berry": "Yarn Berry Zero Install"
+      }
+    },
+    "site-build": {
+      "title": "사이트 제작 과정",
+      "description": "이 웹사이트를 만드는 데 사용된 기술, 과정 및 방법에 대한 내부 이야기입니다.",
+      "technologies": {
+        "title": "사용 기술",
+        "description": "이 웹사이트를 구동하는 핵심 기술과 도구들입니다."
+      },
+      "process": {
+        "title": "개발 과정",
+        "description": "이 사이트를 구축하기 위해 취한 단계별 접근 방식입니다."
+      },
+      "structure": {
+        "title": "사이트 구조",
+        "description": "코드베이스의 아키텍처 구성입니다."
+      },
+      "methods": {
+        "title": "적용한 방법",
+        "description": "이 프로젝트에서 구현된 기술과 모범 사례들입니다."
+      },
+      "learnings": {
+        "title": "새롭게 배운 것",
+        "description": "개발 과정에서 배우고 발견한 것들입니다."
       }
     },
     "resume": {
@@ -92,6 +223,8 @@
       "tech-stack": "기술 스택",
       "resume": "이력서",
       "til": "Today I Learned",
+      "soft-skills": "소프트 스킬",
+      "site-build": "사이트 제작 과정",
       "resources": "리소스",
       "github": "GitHub",
       "blog": "블로그",
@@ -123,54 +256,59 @@
     },
     "newsletter": {
       "title": "블로그 소식 받기",
-      "description": "프론트엔드 개발 관련 새로운 글과 프로젝트 소식을 받아보세요.",
-      "email-placeholder": "이메일 주소를 입력하세요",
+      "description": "프론트엔드 개발 관련 새로운 글과 프로젝트 소식을 받아보십시오.",
+      "email-placeholder": "이메일 주소를 입력하십시오",
       "subscribe": "구독하기"
     },
     "til": {
       "title": "Today I Learned",
       "description": "프론트엔드 개발 과정에서 배운 내용들을 정리한 기술 블로그입니다.",
-      "q1": "Next.js는 어떤 것이 편리할까?",
+      "q1": "Next.js는 어떤 것이 편리할까요?",
       "a1": "Next.js는 서버 사이드 렌더링(SSR), 정적 사이트 생성(SSG), 파일 기반 라우팅, API 라우트, 이미지 최적화 등 다양한 기능을 제공하여 React 애플리케이션 개발을 더 편리하게 만들어줍니다.",
-      "q2": "TypeScript는 왜 사용할까?",
+      "q2": "TypeScript는 왜 사용할까요?",
       "a2": "TypeScript는 정적 타입 시스템을 통해 코드의 안정성을 높이고, 개발 시 오류를 미리 발견할 수 있게 해줍니다. 또한 IDE의 자동 완성 기능을 통해 개발 생산성을 향상시키고, 코드 문서화에도 도움이 됩니다.",
-      "q3": "React Query는 왜 만들어졌을까?",
+      "q3": "React Query는 왜 만들어졌을까요?",
       "a3": "React Query는 서버 상태 관리의 복잡성을 해결하기 위해 만들어졌습니다. 캐싱, 백그라운드 업데이트, 데이터 동기화 등의 기능을 제공하여 API 호출과 관련된 상태 관리를 간소화합니다.",
-      "q4": "Type과 Interface는 어떻게 다를까?",
+      "q4": "Type과 Interface는 어떻게 다를까요?",
       "a4": "Type과 Interface는 TypeScript에서 타입을 정의하는 두 가지 방법입니다. Interface는 확장성이 좋고 선언 병합이 가능한 반면, Type은 유니온 타입, 교차 타입 등 더 다양한 타입 표현이 가능합니다.",
-      "q5": "useState에는 언제 어떻게 타입을 지정해야 할까?",
+      "q5": "useState에는 언제 어떻게 타입을 지정해야 할까요?",
       "a5": "useState에는 초기값만으로 타입 추론이 충분하지 않을 때 제네릭을 사용하여 명시적으로 타입을 지정해야 합니다. 특히 null이나 undefined를 포함하는 상태, 복잡한 객체 타입의 상태에서 유용합니다."
     },
     "cta": {
-      "title": "함께 일해보세요",
-      "description": "프로젝트 협업, 채용, 또는 기타 문의사항이 있으시면 연락해 주세요.",
+      "title": "함께 일해보십시오",
+      "description": "프로젝트 협업, 채용, 또는 기타 문의사항이 있으시면 연락해 주십시오.",
       "trial": "포트폴리오 보기",
       "contact": "문의하기"
     },
     "faq": {
       "title": "자주 묻는 질문",
       "description": "프론트엔드 개발과 관련된 자주 묻는 질문들입니다.",
-      "q1": "어떤 프론트엔드 기술에 특화되어 있나요?",
-      "a1": "React, TypeScript, Next.js 및 다양한 CSS 프레임워크를 포함한 최신 프론트엔드 기술에 특화되어 있습니다. 반응형, 접근성 및 성능이 뛰어난 사용자 인터페이스 구축에 중점을 둡니다.",
-      "q2": "반응형 디자인에 어떻게 접근하나요?",
-      "a2": "Tailwind CSS와 같은 CSS 프레임워크를 사용하여 모바일 우선 접근 방식을 채택합니다. 반응형 디자인 원칙, 유연한 레이아웃 및 철저한 테스트를 통해 모든 기기 크기에서 인터페이스가 잘 작동하도록 보장합니다.",
-      "q3": "상태 관리 경험이 있나요?",
-      "a3": "네, React Context API, Redux, Zustand 및 서버 상태를 위한 React Query 등 다양한 상태 관리 솔루션에 대한 광범위한 경험이 있습니다. 프로젝트 요구 사항에 따라 적절한 솔루션을 선택합니다.",
-      "q4": "코드 품질을 어떻게 보장하나요?",
-      "a4": "종합적인 테스트(단위, 통합, E2E), 코드 리뷰, TypeScript를 통한 정적 타입 검사, 린팅, 그리고 성능과 접근성을 위한 모범 사례를 따름으로써 코드 품질을 유지합니다.",
-      "q5": "디자인 시스템과 함께 작업할 수 있나요?",
+      "career_path": {
+        "title": "왜 프론트엔드 개발자이신가요?",
+        "description": "철학과 지망부터 신학과 입학, 문헌정보학 복수전공, 자료관리 담당, CX, QA를 거쳐 프론트엔드 개발자가 되었습니다. 이 과정은 사람과 논리에 대한 애정에서 비롯되었으며, 사용자 인터페이스와 경험에 대한 깊은 이해를 바탕으로 직관적이고 효율적인 프론트엔드 솔루션을 개발하는 현재의 역량으로 이어졌습니다. 사용자와 가장 가까운 위치에서 기술로 문제를 해결하는 프론트엔드 개발이야말로 제 열정과 역량을 가장 잘 발휘할 수 있는 분야입니다."
+      },
+      "other_questions": "더 궁금한 질문들",
+      "q1": "어떤 프론트엔드 기술에 특화되어 계신가요?",
+      "a1": "React, TypeScript, Next.js 및 다양한 CSS 프레임워크를 포함한 최신 프론트엔드 기술에 특화되어 있습니다. 반응형, 접근성 및 성능이 뛰어난 사용자 인터페이스 구축에 중점을 두고 있습니다.",
+      "q2": "반응형 디자인에 어떻게 접근하고 계신가요?",
+      "a2": "Tailwind CSS와 같은 CSS 프레임워크를 사용하여 모바일 우선 접근 방식을 채택하고 있습니다. 반응형 디자인 원칙, 유연한 레이아웃 및 철저한 테스트를 통해 모든 기기 크기에서 인터페이스가 잘 작동하도록 보장하고 있습니다.",
+      "q3": "상태 관리 경험이 있으신가요?",
+      "a3": "네, React Context API, Redux, Zustand 및 서버 상태를 위한 React Query 등 다양한 상태 관리 솔루션에 대한 광범위한 경험이 있습니다. 프로젝트 요구 사항에 따라 적절한 솔루션을 선택하고 있습니다.",
+      "q4": "코드 품질을 어떻게 보장하고 계신가요?",
+      "a4": "종합적인 테스트(단위, 통합, E2E), 코드 리뷰, TypeScript를 통한 정적 타입 검사, 린팅, 그리고 성능과 접근성을 위한 모범 사례를 따름으로써 코드 품질을 유지하고 있습니다.",
+      "q5": "디자인 시스템과 함께 작업할 수 있으신가요?",
       "a5": "네, 디자인 시스템을 구현하고 유지하는 경험이 있습니다. 일관된 UI 컴포넌트의 중요성을 이해하고 디자이너와 협력하여 그들의 비전을 재사용 가능한 코드 컴포넌트로 변환할 수 있습니다."
     },
     "release": {
-      "title": "뉴스레터 구독하기",
-      "description": "최신 프로젝트, 기술 아티클 및 프론트엔드 개발 인사이트에 대한 업데이트를 받아보세요.",
-      "email-placeholder": "이메일 주소를 입력하세요",
-      "subscribe": "구독하기"
+      "title": "개발자를 위한 메시지",
+      "description": "이 섹션은 이 프로젝트에서 작업하는 개발자를 위한 것입니다.",
+      "message": "끝까지 스크롤해 주셔서 감사합니다! 🎉 이 사이트는 석지인이 ❤️를 담아 만들었습니다. 이스터에그 발견하셨습니다!",
+      "site-build-link-text": "사이트 제작 과정이 궁금하신가요? 확인해 보십시오"
     }
   },
   "ContactPage": {
     "title": "석지인에게 문의하기",
-    "description": "프로젝트 협업, 채용, 또는 기타 문의사항이 있으시면 아래 양식을 작성해 주세요. 최대한 빨리 답변 드리겠습니다.",
+    "description": "프로젝트 협업, 채용, 또는 기타 문의사항이 있으시면 아래 양식을 작성해 주십시오. 최대한 빨리 답변 드리겠습니다.",
     "form": {
       "name": "이름",
       "email": "이메일",
@@ -183,37 +321,37 @@
       "description": "빠른 시일 내에 답변 드리겠습니다. 감사합니다."
     },
     "error-message": {
-      "title": "문제가 발생했습니다.",
-      "description": "다시 시도하시거나 직접 이메일(seokjiin1073@gmail.com)로 연락해 주세요."
+      "title": "문제가 발생하였습니다.",
+      "description": "다시 시도하시거나 직접 이메일(seokjiin1073@gmail.com)로 연락해 주십시오."
     }
   },
   "StepperDialog": {
     "title": "석지인에게 문의하기",
-    "description": "아래 양식을 작성하여 문의사항을 보내주세요.",
+    "description": "아래 양식을 작성하여 문의사항을 보내주십시오.",
     "next": "다음",
     "back": "이전",
     "submit": "문의하기",
     "step1": {
       "title": "기본 정보",
       "name": "이름",
-      "namePlaceholder": "이름을 입력해 주세요",
+      "namePlaceholder": "이름을 입력해 주십시오",
       "email": "이메일",
-      "emailPlaceholder": "이메일을 입력해 주세요",
+      "emailPlaceholder": "이메일을 입력해 주십시오",
       "organization": "소속",
-      "organizationPlaceholder": "회사/학교 등 소속을 입력해 주세요 (선택사항)"
+      "organizationPlaceholder": "회사/학교 등 소속을 입력해 주십시오 (선택사항)"
     },
     "step2": {
       "title": "문의 내용",
       "subject": "문의 제목",
-      "subjectPlaceholder": "문의 제목을 입력해 주세요",
+      "subjectPlaceholder": "문의 제목을 입력해 주십시오",
       "category": "문의 유형",
-      "categoryPlaceholder": "문의 유형을 선택해 주세요",
+      "categoryPlaceholder": "문의 유형을 선택해 주십시오",
       "categoryGeneral": "일반 문의",
       "categoryProject": "프로젝트 협업",
       "categoryJob": "채용 관련",
       "categoryTechnical": "기술 질문",
       "message": "문의 내용",
-      "messagePlaceholder": "문의 내용을 자세히 입력해 주세요"
+      "messagePlaceholder": "문의 내용을 자세히 입력해 주십시오"
     },
     "step3": {
       "title": "확인",

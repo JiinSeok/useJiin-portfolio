@@ -1,4 +1,3 @@
-'use client'
 import YT from 'react-youtube'
 
 export function YouTubeComponent(props: any) {

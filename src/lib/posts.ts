@@ -1,5 +1,8 @@
-import fs from 'fs'
+import { components } from '@/app/_blog/mdx-components'
+import { promises as fs } from 'fs'
+import { compileMDX } from 'next-mdx-remote/rsc'
 import path from 'path'
+import remarkMath from 'remark-math'
 
 type Metadata = {
   title: string
@@ -27,34 +30,62 @@ function parseFrontmatter(fileContent: string) {
   return { metadata: metadata as Metadata, content }
 }
 
-function getMDXFiles(dir: string) {
-  return fs.readdirSync(dir).filter((file) => path.extname(file) === '.mdx')
+async function getMDXFiles(dir: string) {
+  const files = await fs.readdir(dir)
+  return files.filter((file) => path.extname(file) === '.mdx')
 }
 
-function readMDXFile(filePath: string) {
-  const rawContent = fs.readFileSync(filePath, 'utf-8')
+async function readMDXFile(filePath: string) {
+  const rawContent = await fs.readFile(filePath, 'utf-8')
   return parseFrontmatter(rawContent)
 }
 
-function getMDXData(dir: string) {
-  const mdxFiles = getMDXFiles(dir)
-  return mdxFiles.map((file) => {
-    const { metadata, content } = readMDXFile(path.join(dir, file))
+async function getMDXData(dir: string) {
+  const mdxFiles = await getMDXFiles(dir)
+  const postsPromises = mdxFiles.map(async (file) => {
+    const raw = await fs.readFile(path.join(dir, file), 'utf-8')
+    const { metadata, content } = parseFrontmatter(raw)
     const slug = path.basename(file, path.extname(file))
+
+    // 🔥 여기서 바로 JSX로 변환
+    const compiled = await compileMDX({
+      source: content,
+      components,
+      options: {
+        mdxOptions: {
+          remarkPlugins: [remarkMath],
+        },
+      },
+    })
 
     return {
       metadata,
       slug,
-      content,
+      content: compiled.content, // JSX
     }
   })
+
+  return Promise.all(postsPromises)
 }
 
-export function getBlogPosts() {
-  return getMDXData(path.join(process.cwd(), 'content'))
+export async function getBlogPosts() {
+  // Return mock data for debugging
+  return [
+    {
+      metadata: {
+        title: 'Sample Post',
+        publishedAt: '2023-01-01',
+        summary: 'This is a sample post',
+        tags: 'sample',
+        image: '/images/sample.jpg',
+      },
+      slug: 'sample-post',
+      content: 'Sample content',
+    },
+  ]
 }
 
-export function formatDate(date: string, includeRelative = false) {
+export async function formatDate(date: string, includeRelative = false) {
   const currentDate = new Date()
   if (!date.includes('T')) {
     date = `${date}T00:00:00`

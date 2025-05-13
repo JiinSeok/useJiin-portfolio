@@ -1,6 +1,6 @@
-import React from 'react'
 import type { Metadata } from 'next'
-import { projects } from './project-data'
+import React from 'react'
+import { projects } from './data'
 
 export const metadata: Metadata = {
   title: 'Projects',

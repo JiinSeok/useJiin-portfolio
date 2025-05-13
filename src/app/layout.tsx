@@ -1,7 +1,8 @@
 import '@/app/globals.css'
 import { ClientSideProviders } from '@/components/ClientSideProviders'
+import { FloatingButtonGroup } from '@/components/FloatingButtonGroup'
 import { Spinner } from '@/components/ui/Spinner'
-import { SITE_METADATA } from '@/constants/portfolio'
+import { SITE_METADATA } from '@/constants/sections/site'
 import { cn } from '@/lib/utils/classnames'
 import { LayoutProps } from '@/types/types'
 import { Metadata } from 'next'
@@ -25,9 +26,19 @@ export default async function LocaleLayout({ children }: LayoutProps) {
 
   return (
     <html lang={locale}>
-      <body className={cn('min-h-screen w-full bg-background')}>
+      <body className={cn('min-h-screen w-full bg-background text-[clamp(14px,1vw,16px)]')}>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Suspense fallback={<Spinner />}>{children}</Suspense>
+          <FloatingButtonGroup>
+            <FloatingButtonGroup.ButtonContainer>
+              <FloatingButtonGroup.TocButton />
+              <FloatingButtonGroup.ContactButton />
+              <FloatingButtonGroup.ShareButton />
+            </FloatingButtonGroup.ButtonContainer>
+            <FloatingButtonGroup.TocMenu />
+            <FloatingButtonGroup.ContactMenu />
+            <FloatingButtonGroup.ShareMenu />
+          </FloatingButtonGroup>
           <ClientSideProviders />
         </NextIntlClientProvider>
       </body>

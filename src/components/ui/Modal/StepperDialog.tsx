@@ -1,38 +1,25 @@
 'use client'
 
-import Step1Form from '@/components/ui/Modal/ContactDialog/Step1Form'
-import Step2Form from '@/components/ui/Modal/ContactDialog/Step2Form'
-import Step3Confirmation from '@/components/ui/Modal/ContactDialog/Step3Confirmation'
+import Form from '@/components/Form/Form'
 import Modal, { ModalProps } from '@/components/ui/Modal/Modal'
-import Stepper from '@/components/ui/Stepper'
+import { Button } from '@/components/ui/Button'
 import { useTranslations } from 'next-intl'
 import React, { useState } from 'react'
 import { FieldValues } from 'react-hook-form'
 
 /**
- * StepperDialog 컴포넌트: 사용자 문의를 위한 다단계 대화상자
+ * StepperDialog 컴포넌트: 개발자를 위한 메시지 영역
  *
- * 이 컴포넌트는 3단계로 구성된 문의 양식을 제공합니다:
- * 1. 기본 정보 (이름, 이메일, 조직)
- * 2. 문의 내용 (제목, 유형, 메시지)
- * 3. 확인 및 제출
+ * 이 컴포넌트는 간단한 메시지 입력 필드와 전송 버튼을 제공합니다.
  */
 export default function StepperDialog({ isOpen, onRequestClose }: ModalProps) {
   // 번역 훅 사용
   const t = useTranslations('StepperDialog')
 
-  // 폼 데이터 상태 관리
-  const [formData, setFormData] = useState<Record<string, any>>({})
-
-  // 각 단계별 폼 제출 처리
-  const handleStepSubmit = (data: FieldValues): void => {
-    setFormData((prev) => ({ ...prev, ...data }))
-  }
-
-  // 최종 폼 제출 처리
-  const handleFinalSubmit = (): void => {
+  // 폼 제출 처리
+  const handleSubmit = (data: FieldValues): void => {
     // 여기서 백엔드로 데이터를 전송합니다
-    console.log('최종 폼 데이터:', formData)
+    console.log('메시지 데이터:', data)
     onRequestClose()
   }
 
@@ -50,32 +37,32 @@ export default function StepperDialog({ isOpen, onRequestClose }: ModalProps) {
           </p>
         </Modal.Title>
 
-        {/* 단계별 폼 */}
-        <Stepper>
-          {/* 1단계: 기본 정보 */}
-          <Stepper.Step title={t('step1.title') || '기본 정보'}>
-            <Stepper.Content step={1}>
-              <Step1Form formData={formData} onSubmit={handleStepSubmit} />
-            </Stepper.Content>
-          </Stepper.Step>
+        {/* 간단한 메시지 폼 */}
+        <Form formId="contact-simple" onSubmit={handleSubmit}>
+          <div className="space-y-4">
+            {/* 메시지 입력 필드 */}
+            <Form.Fieldset>
+              <Form.Field>
+                <Form.Textarea
+                  name="message"
+                  required
+                  placeholder={
+                    t('step2.messagePlaceholder') ||
+                    '문의 내용을 자세히 입력해 주세요'
+                  }
+                  className="min-h-[120px]"
+                />
+              </Form.Field>
+            </Form.Fieldset>
+          </div>
 
-          {/* 2단계: 문의 내용 */}
-          <Stepper.Step title={t('step2.title') || '문의 내용'}>
-            <Stepper.Content step={0}>
-              <Step2Form formData={formData} onSubmit={handleStepSubmit} />
-            </Stepper.Content>
-          </Stepper.Step>
-
-          {/* 3단계: 확인 */}
-          <Stepper.Step title={t('step3.title') || '확인'}>
-            <Stepper.Content step={2}>
-              <Step3Confirmation
-                formData={formData}
-                onSubmit={handleFinalSubmit}
-              />
-            </Stepper.Content>
-          </Stepper.Step>
-        </Stepper>
+          {/* 전송 버튼 */}
+          <div className="mt-4 flex justify-end">
+            <Form.SubmitButton>
+              {t('submit') || '보내기'}
+            </Form.SubmitButton>
+          </div>
+        </Form>
       </Modal.Body>
     </Modal>
   )

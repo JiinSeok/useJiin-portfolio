@@ -5,10 +5,23 @@
  * Each menu item includes an ID, display name, icon, and path.
  */
 
+import { JSX } from 'react'
 import { ROUTER } from './router'
 
+// Define types for menu items
+interface MenuItem {
+  id: string
+  name: string
+  path: string
+  external?: boolean
+}
+
+interface SocialLinkItem extends MenuItem {
+  icon: JSX.Element
+}
+
 // Main navigation menu items
-export const MAIN_MENU_ITEMS = [
+export const MAIN_MENU_ITEMS: MenuItem[] = [
   {
     id: 'ux-design',
     name: 'UX Design',
@@ -18,6 +31,11 @@ export const MAIN_MENU_ITEMS = [
     id: 'tech-stack',
     name: 'Tech Stack',
     path: ROUTER.TechStack.path,
+  },
+  {
+    id: 'site-build',
+    name: 'How This Site Was Built',
+    path: ROUTER.SiteBuild.path,
   },
   {
     id: 'resume',
@@ -30,6 +48,11 @@ export const MAIN_MENU_ITEMS = [
     path: ROUTER.TIL.path,
   },
   {
+    id: 'soft-skills',
+    name: 'Soft Skills',
+    path: ROUTER.SoftSkills.path,
+  },
+  {
     id: 'contact',
     name: 'Contact',
     path: ROUTER.Contact.path,
@@ -37,7 +60,11 @@ export const MAIN_MENU_ITEMS = [
 ]
 
 // Footer menu items grouped by section
-export const FOOTER_MENU_ITEMS = {
+export const FOOTER_MENU_ITEMS: {
+  SECTIONS: MenuItem[]
+  RESOURCES: MenuItem[]
+  CONNECT: MenuItem[]
+} = {
   SECTIONS: [
     {
       id: 'ux-design',
@@ -50,6 +77,11 @@ export const FOOTER_MENU_ITEMS = {
       path: ROUTER.TechStack.path,
     },
     {
+      id: 'site-build',
+      name: 'How This Site Was Built',
+      path: ROUTER.SiteBuild.path,
+    },
+    {
       id: 'resume',
       name: 'Resume',
       path: ROUTER.Resume.path,
@@ -58,6 +90,11 @@ export const FOOTER_MENU_ITEMS = {
       id: 'til',
       name: 'Today I Learned',
       path: ROUTER.TIL.path,
+    },
+    {
+      id: 'soft-skills',
+      name: 'Soft Skills',
+      path: ROUTER.SoftSkills.path,
     },
   ],
   RESOURCES: [
@@ -70,7 +107,7 @@ export const FOOTER_MENU_ITEMS = {
     {
       id: 'blog',
       name: 'Blog',
-      path: '#',
+      path: ROUTER.Blog.path,
     },
     {
       id: 'projects',
@@ -106,7 +143,7 @@ export const FOOTER_MENU_ITEMS = {
 }
 
 // Social media links
-export const SOCIAL_LINKS = [
+export const SOCIAL_LINKS: SocialLinkItem[] = [
   {
     id: 'github',
     name: 'GitHub',
